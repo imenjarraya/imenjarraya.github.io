@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imen Jarraya - Electrical Engineer & Research Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-navy: #1F3864;
+            --secondary-orange: #E07A1A;
+            --text-dark: #1F1F1F;
+            --text-light: #FFFFFF;
+            --accent-light: #F5F7FA;
+            --accent-muted: #5B6B82;
+            --border-light: #D5DFE8;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(31, 56, 100, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .nav-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--secondary-orange);
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-orange);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 60px;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, #0f1f36 100%);
+            color: var(--text-light);
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(224, 122, 26, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--secondary-orange);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero .tagline {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--secondary-orange);
+            color: var(--text-light);
+        }
+
+        .btn-primary:hover {
+            background: #d86910;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(224, 122, 26, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--secondary-orange);
+        }
+
+        .btn-secondary:hover {
+            background: var(--secondary-orange);
+            color: var(--text-light);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-info a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--secondary-orange);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(20px); }
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--secondary-orange);
+            border-radius: 2px;
+        }
+
+        #about {
+            background: var(--accent-light);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+            margin-top: 2rem;
+        }
+
+        .about-text h3 {
+            color: var(--primary-navy);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .about-text p {
+            color: var(--accent-muted);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .about-text ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            color: var(--accent-muted);
+        }
+
+        .about-text ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .expertise-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .tag {
+            background: var(--primary-navy);
+            color: var(--text-light);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .stat {
+            background: var(--text-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--secondary-orange);
+        }
+
+        .stat-label {
+            color: var(--accent-muted);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Projects Section */
+        #projects {
+            background: var(--text-light);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: var(--accent-light);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border-left: 4px solid var(--secondary-orange);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(31, 56, 100, 0.15);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, var(--primary-navy), #0f1f36);
+            color: var(--text-light);
+            padding: 2rem;
+            text-align: center;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .project-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-company {
+            font-size: 0.85rem;
+            color: var(--secondary-orange);
+            font-weight: 600;
+        }
+
+        .project-body {
+            padding: 1.5rem;
+        }
+
+        .project-description {
+            color: var(--accent-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: var(--primary-navy);
+            color: var(--text-light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Publications Section */
+        #publications {
+            background: var(--accent-light);
+        }
+
+        .publication-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .publication-card {
+            background: var(--text-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-orange);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .publication-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .pub-icon {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .publication-card h4 {
+            font-size: 1.1rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .pub-venue {
+            color: var(--secondary-orange);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .pub-date {
+            color: var(--accent-muted);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-pub {
+            color: var(--secondary-orange);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-pub:hover {
+            color: var(--primary-navy);
+        }
+
+        /* Teaching Section */
+        #teaching {
+            background: var(--accent-light);
+        }
+
+        .teaching-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .course-card {
+            background: var(--text-light);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-top: 4px solid var(--secondary-orange);
+        }
+
+        .course-card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            transform: translateY(-3px);
+        }
+
+        .course-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .course-institution {
+            font-size: 0.85rem;
+            color: var(--secondary-orange);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .course-topics {
+            color: var(--accent-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Research Section */
+        #research {
+            background: var(--text-light);
+        }
+
+        .research-intro {
+            background: var(--accent-light);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-orange);
+            margin-bottom: 2rem;
+            color: var(--accent-muted);
+            line-height: 1.8;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .research-card {
+            background: var(--accent-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-navy);
+        }
+
+        .research-card h4 {
+            color: var(--primary-navy);
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .research-card p {
+            color: var(--accent-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Downloads Section */
+        #downloads {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, #0f1f36 100%);
+            color: var(--text-light);
+        }
+
+        #downloads .section-title {
+            color: var(--text-light);
+        }
+
+        #downloads .section-title::after {
+            background: var(--secondary-orange);
+        }
+
+        .downloads-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .download-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s;
+        }
+
+        .download-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+            border-color: var(--secondary-orange);
+        }
+
+        .download-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .download-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+
+        .download-description {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .download-buttons a {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .download-buttons .btn {
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-navy);
+            color: var(--text-light);
+            text-align: center;
+            padding: 2rem;
+            border-top: 3px solid var(--secondary-orange);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--secondary-orange);
+            border-radius: 50%;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            background: rgba(224, 122, 26, 0.7);
+            transform: scale(1.1);
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 0.8rem 0;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 3rem 1rem;
+                margin-top: 50px;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--accent-light);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--secondary-orange);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-navy);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">IJ</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#downloads">Documents</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Imen Jarraya</h1>
+            <div class="subtitle">Ph.D. Electrical Engineer & Research Developer</div>
+            <p class="tagline">Bridging artificial intelligence, robotics, and sustainable energy systems to create intelligent autonomous platforms for real-world impact.</p>
+            
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#downloads" class="btn btn-secondary">Download Resume</a>
+            </div>
+
+            <div class="contact-info">
+                <span>📧 <a href="mailto:imenjarraya85@gmail.com">imenjarraya85@gmail.com</a></span>
+                <span>📧 <a href="mailto:ijarraya@psu.edu.sa">ijarraya@psu.edu.sa</a></span>
+                <span>📱 <a href="tel:+966557254496">+966 55 725 44 96</a></span>
+                <span>📍 Riyadh, Saudi Arabia</span>
+                <span>💼 <a href="https://www.linkedin.com/in/imen-jarraya-a67898182/" target="_blank">LinkedIn</a></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Postdoctoral Fellow at Prince Sultan University</h3>
+                <p>I am an electrical engineer with a Ph.D. in Electrical Engineering from ENIS (National School of Engineers of Sfax) in collaboration with ESTACA, France. Currently, I work as a Postdoctoral Fellow at Prince Sultan University's Robotics and Internet of Things Unit (RIOTU), where I focus on developing intelligent, autonomous systems.</p>
+                
+                <h3>University Teaching & Education</h3>
+                <p>With <strong>8+ years of university teaching experience</strong>, I have served as a Lecturer and Instructor across multiple institutions:</p>
+                <ul>
+                    <li>Designing and delivering courses in Real-Time Systems, Embedded Systems, and IoT</li>
+                    <li>Conducting hands-on laboratory sessions with Arduino, STM32F4, ESP32</li>
+                    <li>Supervising 10+ final-year student projects</li>
+                    <li>Mentoring graduate students and providing research guidance</li>
+                    <li>Implementing project-based pedagogy with real-world applications</li>
+                </ul>
+
+                <h3>Research & Development Experience</h3>
+                <p>As a <strong>Research Developer</strong> at Novel-Ti and Smart Ways Innovations (2020-2021):</p>
+                <ul>
+                    <li>Developed advanced IoT platforms and robotics solutions</li>
+                    <li>Designed PCB circuits using Altium Designer</li>
+                    <li>Integrated intelligent sensors and control systems</li>
+                    <li>Collaborated on hardware-software integration</li>
+                    <li>Contributed to smart lighting and automation platforms</li>
+                </ul>
+
+                <h3>Key Focus Areas</h3>
+                <div class="expertise-tags">
+                    <span class="tag">UAV Navigation</span>
+                    <span class="tag">AI & Machine Learning</span>
+                    <span class="tag">Energy Systems</span>
+                    <span class="tag">Embedded Systems</span>
+                    <span class="tag">IoT & Sensing</span>
+                    <span class="tag">Power Electronics</span>
+                    <span class="tag">Renewable Energy</span>
+                    <span class="tag">Robotics</span>
+                    <span class="tag">PCB Design</span>
+                    <span class="tag">Research Mentoring</span>
+                </div>
+            </div>
+
+            <div class="about-stats">
+                <div class="stat">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Q1 Journal Publications</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">11</div>
+                    <div class="stat-label">Conference Papers</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">8+</div>
+                    <div class="stat-label">Years Teaching Experience</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Final Year Projects Supervised</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Research Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">🤖</div>
+                    <div class="project-title">IoT & Robotics Solutions</div>
+                    <div class="project-company">Novel-Ti (2020-2021)</div>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">Developed advanced IoT platforms and robotics solutions, including intelligent gateways, smart sensors, and hoverboard control systems.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">Robotics</span>
+                        <span class="tech-tag">PCB Design</span>
+                        <span class="tech-tag">Altium</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">💡</div>
+                    <div class="project-title">Smart Lighting Systems</div>
+                    <div class="project-company">Smart Ways Innovations (2020-2021)</div>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">Designed intelligent public lighting system with IoT integration and AI for energy optimization and fault detection.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">AI/ML</span>
+                        <span class="tech-tag">Smart Cities</span>
+                        <span class="tech-tag">Energy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">🛩️</div>
+                    <div class="project-title">UAV Navigation GNSS-Denied</div>
+                    <div class="project-company">Prince Sultan University (2023-2026)</div>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">Developing advanced terrain-aided navigation for UAVs in GPS-denied environments using sensor fusion and deep learning.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">UAV</span>
+                        <span class="tech-tag">Sensor Fusion</span>
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">Navigation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">🔋</div>
+                    <div class="project-title">Battery Health Monitoring</div>
+                    <div class="project-company">Prince Sultan University (2023-Present)</div>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">Creating hybrid Kolmogorov-Arnold Networks and LSTM models for state-of-health estimation in Li-ion battery systems for EVs.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Energy Systems</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">EV Technology</span>
+                        <span class="tech-tag">State Estimation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">🌱</div>
+                    <div class="project-title">Smart Agriculture Solutions</div>
+                    <div class="project-company">Prince Sultan University (Proposed)</div>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">AI-powered smart harvesting and water resource management for sustainable agriculture aligned with Vision 2030.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">AI</span>
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">Sustainability</span>
+                        <span class="tech-tag">Vision 2030</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">❤️</div>
+                    <div class="project-title">Wearable Health Monitoring</div>
+                    <div class="project-company">Prince Sultan University (Proposed)</div>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">Smart wearable systems for real-time cardiovascular monitoring and disease prevention using advanced biosensors.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Wearables</span>
+                        <span class="tech-tag">AI/ML</span>
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">Health Tech</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications">
+        <h2 class="section-title">Publications & Conferences</h2>
+        
+        <div style="max-width: 1200px; margin: 2rem auto;">
+            <h3 style="color: #1F3864; font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 3px solid #E07A1A; padding-bottom: 0.5rem;">Journal Articles (15+)</h3>
+            
+            <div class="publication-grid">
+                <div class="publication-card">
+                    <div class="pub-icon">📡</div>
+                    <h4>CLAK: CNN-LSTM-Attention and KAN for Non-Visual UAV Localization</h4>
+                    <p class="pub-venue">Satellite Navigation (Q1, IF=10.1)</p>
+                    <p class="pub-date">2026</p>
+                </div>
+
+                <div class="publication-card">
+                    <div class="pub-icon">⚙️</div>
+                    <h4>A Two-Stage Residual EKF using XGBoost and KAN for Terrain-Aided UAV Localization</h4>
+                    <p class="pub-venue">Engineering Applications of AI (Q1, IF=8.0)</p>
+                    <p class="pub-date">2026</p>
+                </div>
+
+                <div class="publication-card">
+                    <div class="pub-icon">🛩️</div>
+                    <h4>GNSS-Denied UAV Navigation: Analyzing Computational Complexity and Localization</h4>
+                    <p class="pub-venue">Satellite Navigation (Q1, IF=10.1)</p>
+                    <p class="pub-date">2025</p>
+                </div>
+
+                <div class="publication-card">
+                    <div class="pub-icon">🔋</div>
+                    <h4>SOH-KLSTM: Hybrid Kolmogorov-Arnold Network and LSTM for Battery Health</h4>
+                    <p class="pub-venue">Journal of Energy Storage (Q1, IF=9.8)</p>
+                    <p class="pub-date">2025</p>
+                </div>
+
+                <div class="publication-card">
+                    <div class="pub-icon">⚡</div>
+                    <h4>Optimizing EV Efficiency with Hybrid Energy Storage Systems</h4>
+                    <p class="pub-venue">Energy (Q1, IF=9.4)</p>
+                    <p class="pub-date">2024</p>
+                </div>
+
+                <div class="publication-card">
+                    <div class="pub-icon">🌐</div>
+                    <h4>Wearable Thoracic Surface Impedance for Continuous Cardiac Monitoring</h4>
+                    <p class="pub-venue">IEEE Access (Q1, IF=3.6)</p>
+                    <p class="pub-date">2024</p>
+                </div>
+
+                <div class="publication-card">
+                    <div class="pub-icon">📊</div>
+                    <h4>OS-RFODG: Open-Source ROS2 Framework for UAV Dataset Generation</h4>
+                    <p class="pub-venue">Results in Engineering (Q1, IF=7.9)</p>
+                    <p class="pub-date">2025</p>
+                </div>
+
+                <div class="publication-card">
+                    <div class="pub-icon">🔌</div>
+                    <h4>Online State of Charge Estimation for Hybrid Electric Drive Vehicles</h4>
+                    <p class="pub-venue">Journal of Energy Storage (Q1, IF=9.8)</p>
+                    <p class="pub-date">2019</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #E07A1A;">
+                <h3 style="color: #1F3864; font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 3px solid #E07A1A; padding-bottom: 0.5rem;">Conference Papers (11)</h3>
+                
+                <div class="publication-grid">
+                    <div class="publication-card">
+                        <div class="pub-icon">🎤</div>
+                        <h4>FLIGHTGEN: ROS2-Powered Automated UAV Dataset Generator</h4>
+                        <p class="pub-venue">SMARTTECH 2024</p>
+                        <p class="pub-date">📍 Marrakesh, Morocco | 2024</p>
+                    </div>
+
+                    <div class="publication-card">
+                        <div class="pub-icon">🔬</div>
+                        <h4>Advanced Terrain-Aided Navigation Using Hybrid Neural Networks</h4>
+                        <p class="pub-venue">IEEE SSD Conference</p>
+                        <p class="pub-date">2024</p>
+                    </div>
+
+                    <div class="publication-card">
+                        <div class="pub-icon">♻️</div>
+                        <h4>Renewable Energy Integration for Autonomous Systems</h4>
+                        <p class="pub-venue">IREC Conference</p>
+                        <p class="pub-date">📍 Tunisia | 2023</p>
+                    </div>
+
+                    <div class="publication-card">
+                        <div class="pub-icon">🚀</div>
+                        <h4>Embedded AI for UAV Control Systems</h4>
+                        <p class="pub-venue">Mediterranean Conference on Control</p>
+                        <p class="pub-date">2023</p>
+                    </div>
+
+                    <div class="publication-card">
+                        <div class="pub-icon">📈</div>
+                        <h4>IoT-Based Smart Energy Management Systems</h4>
+                        <p class="pub-venue">International IoT Conference</p>
+                        <p class="pub-date">2022</p>
+                    </div>
+
+                    <div class="publication-card">
+                        <div class="pub-icon">🎯</div>
+                        <h4>Sensor Fusion Techniques for Autonomous Systems</h4>
+                        <p class="pub-venue">International Robotics Conference</p>
+                        <p class="pub-date">2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Section -->
+    <section id="teaching">
+        <h2 class="section-title">Teaching & Mentoring</h2>
+        <div class="teaching-content">
+            <div class="course-card">
+                <div class="course-icon">⚡</div>
+                <div class="course-name">Real-Time Systems</div>
+                <div class="course-institution">ISET Sidi Bouzid (2021-2023)</div>
+                <p class="course-topics">RTOS fundamentals, scheduling algorithms, real-time control systems, embedded implementations with hands-on labs.</p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">💻</div>
+                <div class="course-name">Embedded Systems Programming</div>
+                <div class="course-institution">ISET Sidi Bouzid (2021-2023)</div>
+                <p class="course-topics">C/C++ on STM32F4, ARM Cortex architecture, Arduino development, hardware-in-the-loop testing.</p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">🌐</div>
+                <div class="course-name">Internet of Things</div>
+                <div class="course-institution">ISET Sidi Bouzid (2021-2023)</div>
+                <p class="course-topics">ESP32 platforms, MQTT protocols, sensor networks, cloud connectivity, IoT security, practical implementations.</p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">🏭</div>
+                <div class="course-name">Industrial Computing Workshop</div>
+                <div class="course-institution">ISGIS Sfax (2011-2015)</div>
+                <p class="course-topics">PLC programming, Grafcet language, SCADA systems, industrial automation, manufacturing control.</p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">⚙️</div>
+                <div class="course-name">Power Electronics Workshop</div>
+                <div class="course-institution">ISGIS Sfax (2011-2015)</div>
+                <p class="course-topics">Power converter design, circuit analysis, control systems, power electronics applications, lab exercises.</p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">🤖</div>
+                <div class="course-name">Automation & Control Systems</div>
+                <div class="course-institution">ISGIS Sfax (2011-2015)</div>
+                <p class="course-topics">Logic control, sensor integration, actuator systems, manufacturing automation, process control.</p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">📊</div>
+                <div class="course-name">Biomedical Measurement (Master)</div>
+                <div class="course-institution">Institute of Biotechnology (2010-2011)</div>
+                <p class="course-topics">Biomedical instrumentation, signal acquisition, measurement systems, data processing techniques.</p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">👥</div>
+                <div class="course-name">Research Mentoring</div>
+                <div class="course-institution">Prince Sultan University (2023-Present)</div>
+                <p class="course-topics">Ph.D. supervision, graduation guidance, research methodology, academic writing, UAV systems, embedded AI.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research">
+        <h2 class="section-title">Research Focus Areas</h2>
+        <div class="research-intro">
+            <strong>Research Vision:</strong> Developing intelligent, reliable, and energy-aware autonomous systems by integrating AI, robotics, embedded systems, power electronics, renewable energy, and smart sensing technologies.
+        </div>
+
+        <div class="research-grid">
+            <div class="research-card">
+                <h4>🛩️ Autonomous UAV Localization</h4>
+                <p>Non-visual and terrain-aided navigation using sensor fusion, Kalman filtering, and deep learning for robust positioning in GNSS-denied environments.</p>
+            </div>
+
+            <div class="research-card">
+                <h4>📊 Open-Source Dataset Generation</h4>
+                <p>Creating reproducible UAV datasets using ROS 2, Gazebo, and PX4 with multi-sensor data for community-driven research.</p>
+            </div>
+
+            <div class="research-card">
+                <h4>🔋 Energy Storage Systems</h4>
+                <p>Hybrid Li-ion and supercapacitor systems, state-of-health monitoring, power management for electric vehicles.</p>
+            </div>
+
+            <div class="research-card">
+                <h4>⚡ Power Electronics</h4>
+                <p>DC/DC converter design, MPPT strategies, renewable energy integration, photovoltaic and wind systems.</p>
+            </div>
+
+            <div class="research-card">
+                <h4>🌐 Smart Sensing & IoT</h4>
+                <p>Embedded sensing, wearable health monitoring, IoT architectures, intelligent automation systems.</p>
+            </div>
+
+            <div class="research-card">
+                <h4>🧠 Machine Learning & AI</h4>
+                <p>CNN-LSTM architectures, Kolmogorov-Arnold Networks, and hybrid models for real-world deployment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloads Section -->
+    <section id="downloads">
+        <h2 class="section-title">Professional Documents</h2>
+        <div style="text-align: center; margin-bottom: 2rem; background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px;">
+            <p style="color: rgba(255,255,255,0.9); margin-bottom: 0.5rem;"><strong>📁 Professional Documents with Sidebar Template</strong></p>
+            <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">All documents formatted professionally with contact information and key details.</p>
+        </div>
+        <div class="downloads-grid">
+            <div class="download-card">
+                <div class="download-icon">📄</div>
+                <div class="download-title">Curriculum Vitae</div>
+                <p class="download-description">Complete professional CV with education, experience, publications, and technical skills.</p>
+                <div class="download-buttons">
+                    <button class="btn btn-primary" onclick="downloadCV()">📥 TXT</button>
+                    <a href="CV_ImenJarraya.pdf" class="btn btn-primary" download target="_blank">📕 PDF</a>
+                </div>
+            </div>
+
+            <div class="download-card">
+                <div class="download-icon">📖</div>
+                <div class="download-title">Teaching Statement</div>
+                <p class="download-description">Teaching philosophy, 8+ courses, mentoring experience, and pedagogical methods.</p>
+                <div class="download-buttons">
+                    <button class="btn btn-primary" onclick="downloadTeaching()">📥 TXT</button>
+                    <a href="Teaching_Statement_ImenJarraya.pdf" class="btn btn-primary" download target="_blank">📕 PDF</a>
+                </div>
+            </div>
+
+            <div class="download-card">
+                <div class="download-icon">🔬</div>
+                <div class="download-title">Research Statement</div>
+                <p class="download-description">Research vision, publications with links, methodology, and future agenda.</p>
+                <div class="download-buttons">
+                    <button class="btn btn-primary" onclick="downloadResearch()">📥 TXT</button>
+                    <a href="Research_Statement_ImenJarraya.pdf" class="btn btn-primary" download target="_blank">📕 PDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3 style="margin-bottom: 1rem;">Let's Connect</h3>
+            <div class="social-links">
+                <a href="mailto:imenjarraya85@gmail.com" title="Email (Personal)">✉️</a>
+                <a href="mailto:ijarraya@psu.edu.sa" title="Email (PSU)">📧</a>
+                <a href="tel:+966557254496" title="Phone">📱</a>
+                <a href="https://www.linkedin.com/in/imen-jarraya-a67898182/" target="_blank" title="LinkedIn">💼</a>
+                <a href="https://scholar.google.com" title="Google Scholar">🎓</a>
+            </div>
+            <p class="footer-text">
+                © 2026 Imen Jarraya. Postdoctoral Fellow at Prince Sultan University (RIOTU Lab), Riyadh, Saudi Arabia.<br>
+                <strong>Email:</strong> imenjarraya85@gmail.com | ijarraya@psu.edu.sa<br>
+                <strong>Phone:</strong> +966 55 725 44 96<br>
+                <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/imen-jarraya-a67898182/" target="_blank" style="color: var(--secondary-orange);">imen-jarraya-a67898182</a><br>
+                Advancing intelligent autonomous systems through research and education aligned with Saudi Vision 2030.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Download functions with embedded content
+        function downloadCV() {
+            const content = `CURRICULUM VITAE
+Imen Jarraya, Ph.D.
+
+CONTACT INFORMATION
+Email (Personal): imenjarraya85@gmail.com
+Email (PSU): ijarraya@psu.edu.sa
+Phone: +966 55 725 44 96
+Location: Riyadh, Saudi Arabia
+LinkedIn: https://www.linkedin.com/in/imen-jarraya-a67898182/
+
+PROFESSIONAL SUMMARY
+Ph.D. Electrical Engineer and Postdoctoral Fellow at Prince Sultan University (RIOTU Lab). Experienced University Lecturer with 8+ years of teaching in Real-Time Systems, Embedded Systems, and IoT. Research Developer at Novel-Ti and Smart Ways Innovations. Specialized in autonomous UAV navigation, battery health monitoring, power electronics, and IoT/AI integration. Published 15+ Q1 journal articles and 11 conference papers.
+
+EDUCATION
+Ph.D. in Electrical Engineering - ENIS & ESTACA, France (Very Honorable)
+Advanced Control and Energy Management Systems
+Master's Degree in Electrical Engineering - ENIS, Tunisia
+State of Charge Estimation for Battery Systems
+
+PROFESSIONAL EXPERIENCE
+Postdoctoral Fellow - Prince Sultan University, RIOTU Lab (2023-Present)
+- Autonomous UAV localization in GNSS-denied environments
+- Battery state-of-health monitoring and estimation
+- Research mentoring and student supervision
+- Q1 journal publications
+
+University Lecturer - ISET Sidi Bouzid (2021-2023)
+- Real-Time Systems, Embedded Systems Programming, Internet of Things
+- Laboratory instruction and practical experiments
+- Graduation project supervision
+- Student mentoring and guidance
+
+Research Developer - Novel-Ti & Smart Ways Innovations (2020-2021)
+- IoT platform development and robotics solutions
+- PCB design using Altium Designer
+- Embedded systems integration
+- Smart lighting and automation systems
+- Hardware-software development and testing
+
+TEACHING EXPERIENCE
+8+ years of university instruction across multiple institutions
+ISET Sidi Bouzid (2021-2023) - Real-Time Systems, Embedded Systems, IoT
+ISGIS Sfax (2011-2015) - Industrial Computing, Power Electronics, Automation
+Higher Institute of Biotechnology (2010-2011) - Biomedical Measurement
+
+COURSES TAUGHT
+- Real-Time Systems (RTOS, scheduling, real-time control)
+- Embedded Systems Programming (C/C++, STM32F4, Arduino)
+- Internet of Things (ESP32, MQTT, sensor networks)
+- Industrial Computing Workshop (PLC, Grafcet, SCADA)
+- Power Electronics Workshop (converters, control systems)
+- Automation & Control Systems
+- Biomedical Measurement (Master level)
+
+RESEARCH INTERESTS
+- Autonomous UAV Navigation & Localization
+- Sensor Fusion & Estimation Theory
+- Machine Learning for Embedded Systems
+- Energy Storage & Battery Management Systems
+- Power Electronics & Renewable Energy
+- IoT & Smart Sensing Systems
+- Robotics & Autonomous Vehicles
+
+PUBLICATIONS
+15+ Q1 Journal Articles in:
+- Satellite Navigation (IF: 10.1)
+- Energy (IF: 9.4)
+- Journal of Energy Storage (IF: 9.8)
+- Engineering Applications of AI (IF: 8.0)
+- Results in Engineering (IF: 7.9)
+- IEEE Access (IF: 3.6)
+
+11 Conference Papers in major international venues
+
+TECHNICAL SKILLS
+Programming: C, C++, Python, MATLAB/Simulink, LabVIEW
+Embedded: STM32F4, Arduino, ESP32, Raspberry Pi, Jetson Nano
+Tools: Altium Designer, ROS 2, Gazebo, PX4, QGIS, Blender
+ML/AI: TensorFlow, PyTorch, Scikit-learn
+Hardware: Circuit design, PCB prototyping, dSPACE HIL testing
+
+LANGUAGES
+English (Fluent), French (Fluent), Arabic (Native), Italian (Basic)`;
+            downloadAsFile(content, 'CV_ImenJarraya.txt');
+        }
+
+        function downloadTeaching() {
+            const content = `TEACHING STATEMENT
+Imen Jarraya, Ph.D.
+
+TEACHING PHILOSOPHY
+My teaching philosophy is grounded in bridging rigorous theoretical foundations with hands-on, real-world application. As an Electrical Engineer, University Lecturer, and Postdoctoral Fellow at Prince Sultan University, I have witnessed how active learning, project-based pedagogy, and research-informed teaching create independent and creative problem-solvers.
+
+TEACHING EXPERIENCE (8+ YEARS)
+2021-2023: ISET, Sidi Bouzid, Tunisia - Lecturer
+2011-2015: ISGIS, Sfax, Tunisia - Lecturer
+2010-2011: Higher Institute of Biotechnology, Sfax - Instructor
+
+COURSES TAUGHT
+Real-Time Systems (RTOS, scheduling, control systems)
+Embedded Systems Programming (C/C++, STM32F4, Arduino)
+Internet of Things (ESP32, MQTT, sensors, cloud)
+Industrial Computing Workshop (PLC, Grafcet, SCADA)
+Power Electronics Workshop (converters, control)
+Automation Basics (logic control, sensors, actuators)
+Biomedical Measurement (Master level)
+
+PEDAGOGICAL APPROACHES
+
+Active Learning & Hands-On Instruction
+Using real hardware (Arduino, STM32F4, ESP32, Jetson Nano) to reinforce theory through tangible outcomes.
+
+Project-Based Learning
+Supervised 10+ graduation projects in IoT, robotics, power systems, and photovoltaics. Students develop professional skills in teamwork, documentation, and problem-solving.
+
+Research-Integrated Teaching
+Connecting teaching to research in UAV navigation, battery monitoring, IoT, and renewable energy systems.
+
+Inclusive & Adaptive Teaching
+Using visual aids, simulation tools (MATLAB/Simulink), hardware demonstrations, and lab activities for diverse learners.
+
+MENTORING & SUPERVISION
+Ph.D. thesis co-supervision (ENIS, from 2019)
+10+ graduation projects as rapporteur
+Current mentoring at PSU (UAV, AI, robotics, IoT)
+Committed to promoting women in STEM
+
+PROFESSIONAL DEVELOPMENT IN TEACHING
+Pedagogical Training Cycle - ENIS Sfax (2010)
+English for Academic Purposes - ENIS (2015-2016)
+Machine Learning - Coursera/Stanford (2021, 95.29/100)
+ROS for Beginners - Udemy (2021)
+Teaching AI with Less Data - PSU (2025)
+Special Session Chair - ICCSIC 2026
+
+FUTURE TEACHING VISION
+Graduate-level courses in:
+- Autonomous Systems & UAV Navigation
+- AI for Energy Systems
+- Embedded AI & Edge Computing
+- Robotics & Internet of Things
+
+COMMITMENT
+Strong commitment to student success, academic excellence, and advancement of engineering education through research-informed, inclusive, and practice-oriented teaching.`;
+            downloadAsFile(content, 'Teaching_Statement_ImenJarraya.txt');
+        }
+
+        function downloadResearch() {
+            const content = `RESEARCH STATEMENT
+Imen Jarraya, Ph.D.
+
+RESEARCH VISION
+Developing intelligent, reliable, and energy-aware autonomous systems by integrating artificial intelligence, robotics, embedded systems, power electronics, renewable energy, and smart sensing technologies.
+
+CURRENT RESEARCH CONTRIBUTIONS
+
+1. AUTONOMOUS UAV LOCALIZATION IN GNSS-DENIED ENVIRONMENTS
+Non-visual and terrain-aided navigation using sensor fusion, Kalman filtering, and deep learning for robust UAV positioning when GNSS is degraded.
+
+Key Publications:
+- CLAK: CNN-LSTM-Attention and KAN - Satellite Navigation (Q1, IF=10.1), 2026
+- Two-Stage Residual EKF with XGBoost - Engineering Applications of AI (Q1, IF=8), 2026
+- GNSS-denied UAV Navigation Analysis - Satellite Navigation (Q1, IF=10.1), 2025
+
+2. OPEN-SOURCE UAV DATASET GENERATION
+ROS 2, Gazebo, PX4-based frameworks for georeferenced UAV datasets enabling reproducible research and community collaboration.
+
+3. ENERGY STORAGE AND ELECTRIC VEHICLE SYSTEMS
+Hybrid Li-ion battery and supercapacitor systems, state-of-health monitoring, power management for electric vehicles.
+
+Key Publications:
+- SOH-KLSTM Battery Health Monitoring - Journal of Energy Storage (Q1, IF=9.8), 2025
+- Optimizing EV with Hybrid Energy - Energy (Q1, IF=9.4), 2024
+- Online State of Charge Estimation - Journal of Energy Storage (Q1, IF=9.8), 2019
+
+4. POWER ELECTRONICS & RENEWABLE ENERGY
+DC/DC converter design, MPPT strategies, photovoltaic systems, wind energy, PCB design.
+
+5. SMART SENSING & IOT SYSTEMS
+Embedded sensing, wearable health monitoring, IoT architectures, precision agriculture, industrial IoT.
+
+RESEARCH METHODOLOGY
+
+Model-Based & Physics-Informed Reasoning
+System modeling, estimation theory, energy models, power electronics principles.
+
+Data-Driven Intelligence
+Machine learning, deep learning, CNN-LSTM-Attention, KAN-based models.
+
+Simulation-to-Real & Reproducibility
+Reproducible pipelines, open-source tools, public datasets, transparent metrics.
+
+Embedded & Hardware-Aware Implementation
+Computational complexity analysis, real-time constraints, hardware integration.
+
+RESEARCH OUTPUT
+
+Journal Articles (15+): Q1 venues
+Conference Papers (11): Major international conferences
+Research Leadership: Special Session Chair ICCSIC 2026
+Peer Review: Multiple high-impact journals
+
+FUTURE RESEARCH AGENDA
+
+1. Resilient UAV/Robot Localization
+Hybrid frameworks for GNSS-denied operations
+
+2. AI for Energy-Aware Autonomy
+Battery health and mission planning integration
+
+3. Embedded AI & Edge Intelligence
+Efficient models on embedded platforms
+
+4. Smart Sensing & Wearables
+Health monitoring, precision agriculture, industrial IoT
+
+5. Hardware-Integrated Platforms
+PCB design, sensor boards, prototype validation
+
+BROADER IMPACT & VISION 2030 ALIGNMENT
+Research creates intelligent, sustainable systems for autonomous navigation, smart mobility, sustainable energy, precision agriculture, and health monitoring. Aligned with Saudi Vision 2030 in digital transformation and technology-driven diversification.`;
+            downloadAsFile(content, 'Research_Statement_ImenJarraya.txt');
+        }
+
+        function downloadAsFile(content, filename) {
+            const element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(content));
+            element.setAttribute('download', filename);
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card, .course-card, .research-card, .download-card, .publication-card').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
