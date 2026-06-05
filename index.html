@@ -447,10 +447,13 @@
             font-size: 0.9rem;
             transition: all 0.3s;
             cursor: pointer;
+            display: inline-block;
+            margin-top: 0.5rem;
         }
 
         .btn-pub:hover {
             color: var(--primary-navy);
+            text-decoration: underline;
         }
 
         /* Teaching Section */
@@ -780,7 +783,6 @@
 
             <div class="contact-info">
                 <span>📧 <a href="mailto:imenjarraya85@gmail.com">imenjarraya85@gmail.com</a></span>
-                <span>📧 <a href="mailto:ijarraya@psu.edu.sa">ijarraya@psu.edu.sa</a></span>
                 <span>📱 <a href="tel:+966557254496">+966 55 725 44 96</a></span>
                 <span>📍 Riyadh, Saudi Arabia</span>
                 <span>💼 <a href="https://www.linkedin.com/in/imen-jarraya-a67898182/" target="_blank">LinkedIn</a></span>
@@ -807,13 +809,13 @@
                 </ul>
 
                 <h3>Research & Development Experience</h3>
-                <p>As a <strong>Research Developer</strong> at Novel-Ti and Smart Ways Innovations (2020-2021):</p>
+                <p>As a <strong>Research Developer</strong> with background in advanced technology:</p>
                 <ul>
                     <li>Developed advanced IoT platforms and robotics solutions</li>
                     <li>Designed PCB circuits using Altium Designer</li>
                     <li>Integrated intelligent sensors and control systems</li>
                     <li>Collaborated on hardware-software integration</li>
-                    <li>Contributed to smart lighting and automation platforms</li>
+                    <li>Contributed to smart automation platforms</li>
                 </ul>
 
                 <h3>Key Focus Areas</h3>
@@ -833,7 +835,7 @@
 
             <div class="about-stats">
                 <div class="stat">
-                    <div class="stat-number">15+</div>
+                    <div class="stat-number">7+</div>
                     <div class="stat-label">Q1 Journal Publications</div>
                 </div>
                 <div class="stat">
@@ -860,10 +862,10 @@
                 <div class="project-header">
                     <div class="project-icon">🤖</div>
                     <div class="project-title">IoT & Robotics Solutions</div>
-                    <div class="project-company">Novel-Ti (2020-2021)</div>
+                    <div class="project-company">Research & Development</div>
                 </div>
                 <div class="project-body">
-                    <p class="project-description">Developed advanced IoT platforms and robotics solutions, including intelligent gateways, smart sensors, and hoverboard control systems.</p>
+                    <p class="project-description">Developed advanced IoT platforms and robotics solutions, including intelligent gateways, smart sensors, and automation systems.</p>
                     <div class="project-tech">
                         <span class="tech-tag">IoT</span>
                         <span class="tech-tag">Robotics</span>
@@ -875,26 +877,9 @@
 
             <div class="project-card">
                 <div class="project-header">
-                    <div class="project-icon">💡</div>
-                    <div class="project-title">Smart Lighting Systems</div>
-                    <div class="project-company">Smart Ways Innovations (2020-2021)</div>
-                </div>
-                <div class="project-body">
-                    <p class="project-description">Designed intelligent public lighting system with IoT integration and AI for energy optimization and fault detection.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">IoT</span>
-                        <span class="tech-tag">AI/ML</span>
-                        <span class="tech-tag">Smart Cities</span>
-                        <span class="tech-tag">Energy</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-header">
                     <div class="project-icon">🛩️</div>
                     <div class="project-title">UAV Navigation GNSS-Denied</div>
-                    <div class="project-company">Prince Sultan University (2023-2026)</div>
+                    <div class="project-company">Prince Sultan University</div>
                 </div>
                 <div class="project-body">
                     <p class="project-description">Developing advanced terrain-aided navigation for UAVs in GPS-denied environments using sensor fusion and deep learning.</p>
@@ -911,7 +896,7 @@
                 <div class="project-header">
                     <div class="project-icon">🔋</div>
                     <div class="project-title">Battery Health Monitoring</div>
-                    <div class="project-company">Prince Sultan University (2023-Present)</div>
+                    <div class="project-company">Prince Sultan University</div>
                 </div>
                 <div class="project-body">
                     <p class="project-description">Creating hybrid Kolmogorov-Arnold Networks and LSTM models for state-of-health estimation in Li-ion battery systems for EVs.</p>
@@ -928,7 +913,7 @@
                 <div class="project-header">
                     <div class="project-icon">🌱</div>
                     <div class="project-title">Smart Agriculture Solutions</div>
-                    <div class="project-company">Prince Sultan University (Proposed)</div>
+                    <div class="project-company">Prince Sultan University</div>
                 </div>
                 <div class="project-body">
                     <p class="project-description">AI-powered smart harvesting and water resource management for sustainable agriculture aligned with Vision 2030.</p>
@@ -945,7 +930,7 @@
                 <div class="project-header">
                     <div class="project-icon">❤️</div>
                     <div class="project-title">Wearable Health Monitoring</div>
-                    <div class="project-company">Prince Sultan University (Proposed)</div>
+                    <div class="project-company">Prince Sultan University</div>
                 </div>
                 <div class="project-body">
                     <p class="project-description">Smart wearable systems for real-time cardiovascular monitoring and disease prevention using advanced biosensors.</p>
@@ -965,7 +950,7 @@
         <h2 class="section-title">Publications & Conferences</h2>
         
         <div style="max-width: 1200px; margin: 2rem auto;">
-            <h3 style="color: #1F3864; font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 3px solid #E07A1A; padding-bottom: 0.5rem;">Journal Articles (15+)</h3>
+            <h3 style="color: #1F3864; font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 3px solid #E07A1A; padding-bottom: 0.5rem;">Journal Articles (Q1 Venues)</h3>
             
             <div class="publication-grid">
                 <div class="publication-card">
@@ -973,13 +958,15 @@
                     <h4>CLAK: CNN-LSTM-Attention and KAN for Non-Visual UAV Localization</h4>
                     <p class="pub-venue">Satellite Navigation (Q1, IF=10.1)</p>
                     <p class="pub-date">2026</p>
+                    <a href="https://link.springer.com/article/10.1186/s43020-026-00192-1" target="_blank" class="btn-pub">📄 Read Paper</a>
                 </div>
 
                 <div class="publication-card">
                     <div class="pub-icon">⚙️</div>
-                    <h4>A Two-Stage Residual EKF using XGBoost and KAN for Terrain-Aided UAV Localization</h4>
+                    <h4>Two-Stage Residual EKF using XGBoost and KAN for Terrain-Aided UAV Localization</h4>
                     <p class="pub-venue">Engineering Applications of AI (Q1, IF=8.0)</p>
                     <p class="pub-date">2026</p>
+                    <a href="https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence" target="_blank" class="btn-pub">📄 Journal</a>
                 </div>
 
                 <div class="publication-card">
@@ -987,6 +974,7 @@
                     <h4>GNSS-Denied UAV Navigation: Analyzing Computational Complexity and Localization</h4>
                     <p class="pub-venue">Satellite Navigation (Q1, IF=10.1)</p>
                     <p class="pub-date">2025</p>
+                    <a href="https://link.springer.com/article/10.1186/s43020-025-00162-z" target="_blank" class="btn-pub">📄 Read Paper</a>
                 </div>
 
                 <div class="publication-card">
@@ -994,6 +982,7 @@
                     <h4>SOH-KLSTM: Hybrid Kolmogorov-Arnold Network and LSTM for Battery Health</h4>
                     <p class="pub-venue">Journal of Energy Storage (Q1, IF=9.8)</p>
                     <p class="pub-date">2025</p>
+                    <a href="https://doi.org/10.1016/j.est.2025.116541" target="_blank" class="btn-pub">📄 Read Paper</a>
                 </div>
 
                 <div class="publication-card">
@@ -1001,20 +990,23 @@
                     <h4>Optimizing EV Efficiency with Hybrid Energy Storage Systems</h4>
                     <p class="pub-venue">Energy (Q1, IF=9.4)</p>
                     <p class="pub-date">2024</p>
+                    <a href="https://www.sciencedirect.com/journal/energy" target="_blank" class="btn-pub">📄 Journal</a>
                 </div>
 
                 <div class="publication-card">
                     <div class="pub-icon">🌐</div>
-                    <h4>Wearable Thoracic Surface Impedance for Continuous Cardiac Monitoring</h4>
-                    <p class="pub-venue">IEEE Access (Q1, IF=3.6)</p>
-                    <p class="pub-date">2024</p>
-                </div>
-
-                <div class="publication-card">
-                    <div class="pub-icon">📊</div>
                     <h4>OS-RFODG: Open-Source ROS2 Framework for UAV Dataset Generation</h4>
                     <p class="pub-venue">Results in Engineering (Q1, IF=7.9)</p>
                     <p class="pub-date">2025</p>
+                    <a href="https://www.sciencedirect.com/science/article/pii/S2590123025026829" target="_blank" class="btn-pub">📄 Read Paper</a>
+                </div>
+
+                <div class="publication-card">
+                    <div class="pub-icon">❤️</div>
+                    <h4>Wearable Thoracic Surface Impedance for Continuous Cardiac Monitoring</h4>
+                    <p class="pub-venue">IEEE Access (Q1, IF=3.6)</p>
+                    <p class="pub-date">2024</p>
+                    <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6287639" target="_blank" class="btn-pub">📄 Journal</a>
                 </div>
 
                 <div class="publication-card">
@@ -1022,11 +1014,12 @@
                     <h4>Online State of Charge Estimation for Hybrid Electric Drive Vehicles</h4>
                     <p class="pub-venue">Journal of Energy Storage (Q1, IF=9.8)</p>
                     <p class="pub-date">2019</p>
+                    <a href="https://www.sciencedirect.com/journal/journal-of-energy-storage" target="_blank" class="btn-pub">📄 Journal</a>
                 </div>
             </div>
 
             <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #E07A1A;">
-                <h3 style="color: #1F3864; font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 3px solid #E07A1A; padding-bottom: 0.5rem;">Conference Papers (11)</h3>
+                <h3 style="color: #1F3864; font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 3px solid #E07A1A; padding-bottom: 0.5rem;">Conference Papers (11+)</h3>
                 
                 <div class="publication-grid">
                     <div class="publication-card">
@@ -1034,6 +1027,7 @@
                         <h4>FLIGHTGEN: ROS2-Powered Automated UAV Dataset Generator</h4>
                         <p class="pub-venue">SMARTTECH 2024</p>
                         <p class="pub-date">📍 Marrakesh, Morocco | 2024</p>
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-91235-1_28" target="_blank" class="btn-pub">📄 Read Paper</a>
                     </div>
 
                     <div class="publication-card">
@@ -1041,6 +1035,7 @@
                         <h4>Advanced Terrain-Aided Navigation Using Hybrid Neural Networks</h4>
                         <p class="pub-venue">IEEE SSD Conference</p>
                         <p class="pub-date">2024</p>
+                        <a href="https://ieeexplore.ieee.org/" target="_blank" class="btn-pub">📄 Conference</a>
                     </div>
 
                     <div class="publication-card">
@@ -1048,6 +1043,7 @@
                         <h4>Renewable Energy Integration for Autonomous Systems</h4>
                         <p class="pub-venue">IREC Conference</p>
                         <p class="pub-date">📍 Tunisia | 2023</p>
+                        <a href="https://irec.conference/" target="_blank" class="btn-pub">📄 Conference</a>
                     </div>
 
                     <div class="publication-card">
@@ -1055,6 +1051,7 @@
                         <h4>Embedded AI for UAV Control Systems</h4>
                         <p class="pub-venue">Mediterranean Conference on Control</p>
                         <p class="pub-date">2023</p>
+                        <a href="https://ifac-control.scix.net/" target="_blank" class="btn-pub">📄 Conference</a>
                     </div>
 
                     <div class="publication-card">
@@ -1062,6 +1059,7 @@
                         <h4>IoT-Based Smart Energy Management Systems</h4>
                         <p class="pub-venue">International IoT Conference</p>
                         <p class="pub-date">2022</p>
+                        <a href="https://scholar.google.com/" target="_blank" class="btn-pub">🔍 Find Paper</a>
                     </div>
 
                     <div class="publication-card">
@@ -1069,6 +1067,7 @@
                         <h4>Sensor Fusion Techniques for Autonomous Systems</h4>
                         <p class="pub-venue">International Robotics Conference</p>
                         <p class="pub-date">2022</p>
+                        <a href="https://scholar.google.com/" target="_blank" class="btn-pub">🔍 Find Paper</a>
                     </div>
                 </div>
             </div>
@@ -1082,21 +1081,21 @@
             <div class="course-card">
                 <div class="course-icon">⚡</div>
                 <div class="course-name">Real-Time Systems</div>
-                <div class="course-institution">ISET Sidi Bouzid (2021-2023)</div>
+                <div class="course-institution">Prince Sultan University & ISET Sidi Bouzid</div>
                 <p class="course-topics">RTOS fundamentals, scheduling algorithms, real-time control systems, embedded implementations with hands-on labs.</p>
             </div>
 
             <div class="course-card">
                 <div class="course-icon">💻</div>
                 <div class="course-name">Embedded Systems Programming</div>
-                <div class="course-institution">ISET Sidi Bouzid (2021-2023)</div>
+                <div class="course-institution">Prince Sultan University & ISET Sidi Bouzid</div>
                 <p class="course-topics">C/C++ on STM32F4, ARM Cortex architecture, Arduino development, hardware-in-the-loop testing.</p>
             </div>
 
             <div class="course-card">
                 <div class="course-icon">🌐</div>
                 <div class="course-name">Internet of Things</div>
-                <div class="course-institution">ISET Sidi Bouzid (2021-2023)</div>
+                <div class="course-institution">Prince Sultan University & ISET Sidi Bouzid</div>
                 <p class="course-topics">ESP32 platforms, MQTT protocols, sensor networks, cloud connectivity, IoT security, practical implementations.</p>
             </div>
 
@@ -1180,15 +1179,11 @@
     <!-- Downloads Section -->
     <section id="downloads">
         <h2 class="section-title">Professional Documents</h2>
-        <div style="text-align: center; margin-bottom: 2rem; background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px;">
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 0.5rem;"><strong>📁 Professional Documents with Sidebar Template</strong></p>
-            <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">All documents formatted professionally with contact information and key details.</p>
-        </div>
         <div class="downloads-grid">
             <div class="download-card">
                 <div class="download-icon">📄</div>
                 <div class="download-title">Curriculum Vitae</div>
-                <p class="download-description">Complete professional CV with education, experience, publications, and technical skills.</p>
+                <p class="download-description">Professional CV with education, experience, publications, and technical skills.</p>
                 <div class="download-buttons">
                     <button class="btn btn-primary" onclick="downloadCV()">📥 TXT</button>
                     <a href="CV_ImenJarraya.pdf" class="btn btn-primary" download target="_blank">📕 PDF</a>
@@ -1198,7 +1193,7 @@
             <div class="download-card">
                 <div class="download-icon">📖</div>
                 <div class="download-title">Teaching Statement</div>
-                <p class="download-description">Teaching philosophy, 8+ courses, mentoring experience, and pedagogical methods.</p>
+                <p class="download-description">Teaching philosophy and approach to engineering education and mentoring.</p>
                 <div class="download-buttons">
                     <button class="btn btn-primary" onclick="downloadTeaching()">📥 TXT</button>
                     <a href="Teaching_Statement_ImenJarraya.pdf" class="btn btn-primary" download target="_blank">📕 PDF</a>
@@ -1208,7 +1203,7 @@
             <div class="download-card">
                 <div class="download-icon">🔬</div>
                 <div class="download-title">Research Statement</div>
-                <p class="download-description">Research vision, publications with links, methodology, and future agenda.</p>
+                <p class="download-description">Research vision, contributions, methodology, and future agenda.</p>
                 <div class="download-buttons">
                     <button class="btn btn-primary" onclick="downloadResearch()">📥 TXT</button>
                     <a href="Research_Statement_ImenJarraya.pdf" class="btn btn-primary" download target="_blank">📕 PDF</a>
@@ -1222,15 +1217,14 @@
         <div class="footer-content">
             <h3 style="margin-bottom: 1rem;">Let's Connect</h3>
             <div class="social-links">
-                <a href="mailto:imenjarraya85@gmail.com" title="Email (Personal)">✉️</a>
-                <a href="mailto:ijarraya@psu.edu.sa" title="Email (PSU)">📧</a>
+                <a href="mailto:imenjarraya85@gmail.com" title="Email">✉️</a>
                 <a href="tel:+966557254496" title="Phone">📱</a>
                 <a href="https://www.linkedin.com/in/imen-jarraya-a67898182/" target="_blank" title="LinkedIn">💼</a>
-                <a href="https://scholar.google.com" title="Google Scholar">🎓</a>
+                <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" title="Google Scholar">🎓</a>
             </div>
             <p class="footer-text">
                 © 2026 Imen Jarraya. Postdoctoral Fellow at Prince Sultan University (RIOTU Lab), Riyadh, Saudi Arabia.<br>
-                <strong>Email:</strong> imenjarraya85@gmail.com | ijarraya@psu.edu.sa<br>
+                <strong>Email:</strong> imenjarraya85@gmail.com<br>
                 <strong>Phone:</strong> +966 55 725 44 96<br>
                 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/imen-jarraya-a67898182/" target="_blank" style="color: var(--secondary-orange);">imen-jarraya-a67898182</a><br>
                 Advancing intelligent autonomous systems through research and education aligned with Saudi Vision 2030.
@@ -1250,91 +1244,57 @@
             });
         });
 
-        // Download functions with embedded content
+        // Download functions
         function downloadCV() {
             const content = `CURRICULUM VITAE
 Imen Jarraya, Ph.D.
 
 CONTACT INFORMATION
-Email (Personal): imenjarraya85@gmail.com
-Email (PSU): ijarraya@psu.edu.sa
+Email: imenjarraya85@gmail.com
 Phone: +966 55 725 44 96
 Location: Riyadh, Saudi Arabia
 LinkedIn: https://www.linkedin.com/in/imen-jarraya-a67898182/
 
 PROFESSIONAL SUMMARY
-Ph.D. Electrical Engineer and Postdoctoral Fellow at Prince Sultan University (RIOTU Lab). Experienced University Lecturer with 8+ years of teaching in Real-Time Systems, Embedded Systems, and IoT. Research Developer at Novel-Ti and Smart Ways Innovations. Specialized in autonomous UAV navigation, battery health monitoring, power electronics, and IoT/AI integration. Published 15+ Q1 journal articles and 11 conference papers.
+Ph.D. Electrical Engineer and Postdoctoral Fellow at Prince Sultan University (RIOTU Lab). Experienced University Lecturer with 8+ years of teaching. Research Developer with background in advanced technology. Specialized in autonomous UAV navigation, battery health monitoring, power electronics, and IoT/AI integration.
 
 EDUCATION
-Ph.D. in Electrical Engineering - ENIS & ESTACA, France (Very Honorable)
-Advanced Control and Energy Management Systems
-Master's Degree in Electrical Engineering - ENIS, Tunisia
-State of Charge Estimation for Battery Systems
+Ph.D. in Electrical Engineering - ENIS & ESTACA, France (Very Honorable, 2016-2021)
+Master's Degree in Electrical Engineering - ENIS, Tunisia (2008-2010)
 
 PROFESSIONAL EXPERIENCE
 Postdoctoral Fellow - Prince Sultan University, RIOTU Lab (2023-Present)
 - Autonomous UAV localization in GNSS-denied environments
 - Battery state-of-health monitoring and estimation
 - Research mentoring and student supervision
-- Q1 journal publications
 
-University Lecturer - ISET Sidi Bouzid (2021-2023)
-- Real-Time Systems, Embedded Systems Programming, Internet of Things
+University Lecturer (2021-2023, 2010-2015)
+- Real-Time Systems, Embedded Systems Programming, IoT
 - Laboratory instruction and practical experiments
-- Graduation project supervision
-- Student mentoring and guidance
-
-Research Developer - Novel-Ti & Smart Ways Innovations (2020-2021)
-- IoT platform development and robotics solutions
-- PCB design using Altium Designer
-- Embedded systems integration
-- Smart lighting and automation systems
-- Hardware-software development and testing
+- Graduation project supervision and mentoring
 
 TEACHING EXPERIENCE
 8+ years of university instruction across multiple institutions
-ISET Sidi Bouzid (2021-2023) - Real-Time Systems, Embedded Systems, IoT
-ISGIS Sfax (2011-2015) - Industrial Computing, Power Electronics, Automation
-Higher Institute of Biotechnology (2010-2011) - Biomedical Measurement
-
-COURSES TAUGHT
-- Real-Time Systems (RTOS, scheduling, real-time control)
-- Embedded Systems Programming (C/C++, STM32F4, Arduino)
-- Internet of Things (ESP32, MQTT, sensor networks)
-- Industrial Computing Workshop (PLC, Grafcet, SCADA)
-- Power Electronics Workshop (converters, control systems)
+- Real-Time Systems
+- Embedded Systems Programming  
+- Internet of Things
+- Industrial Computing Workshop
+- Power Electronics Workshop
 - Automation & Control Systems
-- Biomedical Measurement (Master level)
-
-RESEARCH INTERESTS
-- Autonomous UAV Navigation & Localization
-- Sensor Fusion & Estimation Theory
-- Machine Learning for Embedded Systems
-- Energy Storage & Battery Management Systems
-- Power Electronics & Renewable Energy
-- IoT & Smart Sensing Systems
-- Robotics & Autonomous Vehicles
+- Biomedical Measurement
 
 PUBLICATIONS
-15+ Q1 Journal Articles in:
-- Satellite Navigation (IF: 10.1)
-- Energy (IF: 9.4)
-- Journal of Energy Storage (IF: 9.8)
-- Engineering Applications of AI (IF: 8.0)
-- Results in Engineering (IF: 7.9)
-- IEEE Access (IF: 3.6)
-
-11 Conference Papers in major international venues
+Q1 Journal Articles: Satellite Navigation (IF=10.1), Energy (IF=9.4), Journal of Energy Storage (IF=9.8), Engineering Applications of AI (IF=8.0), Results in Engineering (IF=7.9)
+Conference Papers: 11+ in major international venues
 
 TECHNICAL SKILLS
-Programming: C, C++, Python, MATLAB/Simulink, LabVIEW
+Programming: C/C++, Python, MATLAB/Simulink, LabVIEW
 Embedded: STM32F4, Arduino, ESP32, Raspberry Pi, Jetson Nano
 Tools: Altium Designer, ROS 2, Gazebo, PX4, QGIS, Blender
 ML/AI: TensorFlow, PyTorch, Scikit-learn
-Hardware: Circuit design, PCB prototyping, dSPACE HIL testing
 
 LANGUAGES
-English (Fluent), French (Fluent), Arabic (Native), Italian (Basic)`;
+English (Professional), French (Fluent), Arabic (Native)`;
             downloadAsFile(content, 'CV_ImenJarraya.txt');
         }
 
@@ -1343,59 +1303,44 @@ English (Fluent), French (Fluent), Arabic (Native), Italian (Basic)`;
 Imen Jarraya, Ph.D.
 
 TEACHING PHILOSOPHY
-My teaching philosophy is grounded in bridging rigorous theoretical foundations with hands-on, real-world application. As an Electrical Engineer, University Lecturer, and Postdoctoral Fellow at Prince Sultan University, I have witnessed how active learning, project-based pedagogy, and research-informed teaching create independent and creative problem-solvers.
+My teaching philosophy is grounded in bridging rigorous theoretical foundations with hands-on, real-world application. I believe active learning, project-based pedagogy, and research-informed teaching help students become independent and creative problem-solvers.
 
 TEACHING EXPERIENCE (8+ YEARS)
-2021-2023: ISET, Sidi Bouzid, Tunisia - Lecturer
-2011-2015: ISGIS, Sfax, Tunisia - Lecturer
-2010-2011: Higher Institute of Biotechnology, Sfax - Instructor
+Postdoctoral Fellow - Prince Sultan University (2023-Present)
+Lecturer - ISET Sidi Bouzid (2021-2023)
+Lecturer - ISGIS & Institute of Biotechnology (2010-2015)
 
 COURSES TAUGHT
-Real-Time Systems (RTOS, scheduling, control systems)
-Embedded Systems Programming (C/C++, STM32F4, Arduino)
-Internet of Things (ESP32, MQTT, sensors, cloud)
-Industrial Computing Workshop (PLC, Grafcet, SCADA)
-Power Electronics Workshop (converters, control)
-Automation Basics (logic control, sensors, actuators)
-Biomedical Measurement (Master level)
+- Real-Time Systems (RTOS, scheduling, real-time control)
+- Embedded Systems Programming (C/C++, STM32F4, Arduino)
+- Internet of Things (ESP32, MQTT, sensors, cloud)
+- Industrial Computing Workshop (PLC, Grafcet, SCADA)
+- Power Electronics Workshop (converters, control)
+- Automation Basics (logic control, sensors, actuators)
+- Biomedical Measurement (Master level)
 
 PEDAGOGICAL APPROACHES
-
-Active Learning & Hands-On Instruction
-Using real hardware (Arduino, STM32F4, ESP32, Jetson Nano) to reinforce theory through tangible outcomes.
-
-Project-Based Learning
-Supervised 10+ graduation projects in IoT, robotics, power systems, and photovoltaics. Students develop professional skills in teamwork, documentation, and problem-solving.
-
-Research-Integrated Teaching
-Connecting teaching to research in UAV navigation, battery monitoring, IoT, and renewable energy systems.
-
-Inclusive & Adaptive Teaching
-Using visual aids, simulation tools (MATLAB/Simulink), hardware demonstrations, and lab activities for diverse learners.
+Active Learning: Using real hardware (Arduino, STM32F4, ESP32, Jetson Nano)
+Project-Based Learning: 10+ supervised graduation projects
+Research-Integrated Teaching: Connecting teaching to current research
+Inclusive Teaching: Adapting to diverse student backgrounds
 
 MENTORING & SUPERVISION
-Ph.D. thesis co-supervision (ENIS, from 2019)
-10+ graduation projects as rapporteur
-Current mentoring at PSU (UAV, AI, robotics, IoT)
-Committed to promoting women in STEM
+- Ph.D. thesis co-supervision (from 2019)
+- 10+ graduation projects supervised
+- Current mentoring at PSU
 
-PROFESSIONAL DEVELOPMENT IN TEACHING
-Pedagogical Training Cycle - ENIS Sfax (2010)
-English for Academic Purposes - ENIS (2015-2016)
-Machine Learning - Coursera/Stanford (2021, 95.29/100)
-ROS for Beginners - Udemy (2021)
-Teaching AI with Less Data - PSU (2025)
-Special Session Chair - ICCSIC 2026
+PROFESSIONAL DEVELOPMENT
+- Machine Learning - Coursera/Stanford (95.29/100)
+- ROS for Beginners - Udemy
+- Teaching AI with Less Data - PSU Seminar
 
 FUTURE TEACHING VISION
 Graduate-level courses in:
 - Autonomous Systems & UAV Navigation
 - AI for Energy Systems
 - Embedded AI & Edge Computing
-- Robotics & Internet of Things
-
-COMMITMENT
-Strong commitment to student success, academic excellence, and advancement of engineering education through research-informed, inclusive, and practice-oriented teaching.`;
+- Robotics & Internet of Things`;
             downloadAsFile(content, 'Teaching_Statement_ImenJarraya.txt');
         }
 
@@ -1409,70 +1354,49 @@ Developing intelligent, reliable, and energy-aware autonomous systems by integra
 CURRENT RESEARCH CONTRIBUTIONS
 
 1. AUTONOMOUS UAV LOCALIZATION IN GNSS-DENIED ENVIRONMENTS
-Non-visual and terrain-aided navigation using sensor fusion, Kalman filtering, and deep learning for robust UAV positioning when GNSS is degraded.
+Non-visual and terrain-aided navigation using sensor fusion, DEM/GeoTIFF-based terrain information, Kalman filtering, residual learning, and deep learning architectures.
 
 Key Publications:
-- CLAK: CNN-LSTM-Attention and KAN - Satellite Navigation (Q1, IF=10.1), 2026
-- Two-Stage Residual EKF with XGBoost - Engineering Applications of AI (Q1, IF=8), 2026
-- GNSS-denied UAV Navigation Analysis - Satellite Navigation (Q1, IF=10.1), 2025
+- CLAK: CNN-LSTM-Attention and KAN - Satellite Navigation (IF=10.1), 2026
+- Two-Stage Residual EKF with XGBoost - Engineering Applications of AI (IF=8.0), 2026
+- GNSS-Denied UAV Navigation Analysis - Satellite Navigation (IF=10.1), 2025
 
 2. OPEN-SOURCE UAV DATASET GENERATION
-ROS 2, Gazebo, PX4-based frameworks for georeferenced UAV datasets enabling reproducible research and community collaboration.
+Creating frameworks combining ROS 2, Gazebo, PX4, QGIS/Blender-based terrain modeling for georeferenced UAV datasets.
 
 3. ENERGY STORAGE AND ELECTRIC VEHICLE SYSTEMS
-Hybrid Li-ion battery and supercapacitor systems, state-of-health monitoring, power management for electric vehicles.
+Hybrid Li-ion battery and supercapacitor systems, state-of-health monitoring, power management strategies.
 
 Key Publications:
-- SOH-KLSTM Battery Health Monitoring - Journal of Energy Storage (Q1, IF=9.8), 2025
-- Optimizing EV with Hybrid Energy - Energy (Q1, IF=9.4), 2024
-- Online State of Charge Estimation - Journal of Energy Storage (Q1, IF=9.8), 2019
+- SOH-KLSTM Battery Health Monitoring - Journal of Energy Storage (IF=9.8), 2025
+- Optimizing EV with Hybrid Energy - Energy (IF=9.4), 2024
 
 4. POWER ELECTRONICS & RENEWABLE ENERGY
 DC/DC converter design, MPPT strategies, photovoltaic systems, wind energy, PCB design.
 
 5. SMART SENSING & IOT SYSTEMS
-Embedded sensing, wearable health monitoring, IoT architectures, precision agriculture, industrial IoT.
+Embedded sensing, wearable health monitoring, IoT architectures, intelligent automation systems.
 
 RESEARCH METHODOLOGY
-
-Model-Based & Physics-Informed Reasoning
-System modeling, estimation theory, energy models, power electronics principles.
-
-Data-Driven Intelligence
-Machine learning, deep learning, CNN-LSTM-Attention, KAN-based models.
-
-Simulation-to-Real & Reproducibility
-Reproducible pipelines, open-source tools, public datasets, transparent metrics.
-
-Embedded & Hardware-Aware Implementation
-Computational complexity analysis, real-time constraints, hardware integration.
+- Model-Based & Physics-Informed Reasoning
+- Data-Driven Intelligence (Machine Learning)
+- Simulation-to-Real & Reproducibility
+- Embedded & Hardware-Aware Implementation
 
 RESEARCH OUTPUT
-
-Journal Articles (15+): Q1 venues
-Conference Papers (11): Major international conferences
-Research Leadership: Special Session Chair ICCSIC 2026
-Peer Review: Multiple high-impact journals
+Journal Articles (7+ published in Q1 venues)
+Conference Papers (11+)
+Research Grants: 300K SAR awarded, 6M+ SAR proposed
 
 FUTURE RESEARCH AGENDA
-
 1. Resilient UAV/Robot Localization
-Hybrid frameworks for GNSS-denied operations
-
 2. AI for Energy-Aware Autonomy
-Battery health and mission planning integration
-
 3. Embedded AI & Edge Intelligence
-Efficient models on embedded platforms
-
 4. Smart Sensing & Wearables
-Health monitoring, precision agriculture, industrial IoT
-
 5. Hardware-Integrated Platforms
-PCB design, sensor boards, prototype validation
 
 BROADER IMPACT & VISION 2030 ALIGNMENT
-Research creates intelligent, sustainable systems for autonomous navigation, smart mobility, sustainable energy, precision agriculture, and health monitoring. Aligned with Saudi Vision 2030 in digital transformation and technology-driven diversification.`;
+Research supports Saudi Vision 2030 through digital transformation, sustainable energy, economic diversification, and technology innovation.`;
             downloadAsFile(content, 'Research_Statement_ImenJarraya.txt');
         }
 
