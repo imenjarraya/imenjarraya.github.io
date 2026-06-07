@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imen Jarraya - Electrical Engineer & Research Developer</title>
+    <title>Imen Jarraya - Electrical Engineer & Postdoctoral Fellow</title>
     <style>
         * {
             margin: 0;
@@ -18,7 +18,6 @@
             --text-light: #FFFFFF;
             --accent-light: #F5F7FA;
             --accent-muted: #5B6B82;
-            --border-light: #D5DFE8;
         }
 
         html {
@@ -37,55 +36,62 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(31, 56, 100, 0.95);
+            background: rgba(31, 56, 100, 0.98);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1.2rem 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.15);
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem;
+            padding: 0 3rem;
         }
 
         .nav-logo {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: bold;
             color: var(--secondary-orange);
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            font-weight: 900;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 3rem;
             list-style: none;
         }
 
         .nav-links a {
             color: var(--text-light);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 1rem;
             transition: color 0.3s;
+            letter-spacing: 0.5px;
         }
 
         .nav-links a:hover {
             color: var(--secondary-orange);
         }
 
-        /* Hero Section */
+        /* Hero Section - MATCHES TEMPLATE */
         .hero {
-            margin-top: 60px;
-            background: linear-gradient(135deg, var(--primary-navy) 0%, #0f1f36 100%);
+            margin-top: 0;
+            background: linear-gradient(135deg, #1F3864 0%, #0f1f36 100%);
             color: var(--text-light);
-            padding: 6rem 2rem;
+            padding: 120px 2rem 100px 2rem;
             text-align: center;
             position: relative;
             overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hero::before {
@@ -93,9 +99,9 @@
             position: absolute;
             top: -50%;
             right: -10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(224, 122, 26, 0.1) 0%, transparent 70%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(224, 122, 26, 0.08) 0%, transparent 70%);
             border-radius: 50%;
             animation: float 6s ease-in-out infinite;
         }
@@ -108,46 +114,52 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: -1px;
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            letter-spacing: -2px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            line-height: 1.1;
         }
 
         .hero .subtitle {
-            font-size: 1.5rem;
+            font-size: 2rem;
             color: var(--secondary-orange);
-            margin-bottom: 1rem;
-            font-weight: 600;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .hero .tagline {
-            font-size: 1.2rem;
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 2rem;
-            max-width: 700px;
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 3rem;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.8;
+            letter-spacing: 0.3px;
         }
 
         .hero-cta {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: 2rem;
+            margin-bottom: 4rem;
         }
 
         .btn {
-            padding: 0.9rem 2rem;
+            padding: 1rem 2.5rem;
             border: none;
-            border-radius: 5px;
-            font-weight: 600;
+            border-radius: 8px;
+            font-weight: 700;
             cursor: pointer;
             transition: all 0.3s;
             text-decoration: none;
             display: inline-block;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
         }
 
         .btn-primary {
@@ -157,40 +169,44 @@
 
         .btn-primary:hover {
             background: #d86910;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(224, 122, 26, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(224, 122, 26, 0.4);
         }
 
         .btn-secondary {
             background: transparent;
             color: var(--text-light);
-            border: 2px solid var(--secondary-orange);
+            border: 2.5px solid var(--secondary-orange);
         }
 
         .btn-secondary:hover {
             background: var(--secondary-orange);
             color: var(--text-light);
+            transform: translateY(-3px);
         }
 
         .contact-info {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 2.5rem;
+            margin-top: 0;
             flex-wrap: wrap;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
         .contact-info span {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.8rem;
         }
 
         .contact-info a {
             color: inherit;
             text-decoration: none;
             transition: color 0.3s;
+            font-weight: 500;
         }
 
         .contact-info a:hover {
@@ -199,37 +215,38 @@
 
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(20px); }
+            50% { transform: translateY(25px); }
         }
 
         /* Sections */
         section {
-            padding: 4rem 2rem;
-            max-width: 1200px;
+            padding: 5rem 2rem;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
         .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 2.8rem;
+            font-weight: 800;
             color: var(--primary-navy);
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
             text-align: center;
             position: relative;
             display: inline-block;
             width: 100%;
+            letter-spacing: -1px;
         }
 
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
+            width: 80px;
+            height: 5px;
             background: var(--secondary-orange);
-            border-radius: 2px;
+            border-radius: 3px;
         }
 
         #about {
@@ -239,48 +256,51 @@
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 4rem;
             align-items: start;
             margin-top: 2rem;
         }
 
         .about-text h3 {
             color: var(--primary-navy);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            margin-top: 1.5rem;
+            font-size: 1.7rem;
+            margin-bottom: 1.2rem;
+            margin-top: 2rem;
+            font-weight: 700;
         }
 
         .about-text p {
             color: var(--accent-muted);
-            margin-bottom: 1rem;
-            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            line-height: 1.9;
+            font-size: 1rem;
         }
 
         .about-text ul {
-            margin: 1rem 0;
-            padding-left: 1.5rem;
+            margin: 1.2rem 0;
+            padding-left: 2rem;
             color: var(--accent-muted);
         }
 
         .about-text ul li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.7rem;
+            line-height: 1.7;
         }
 
         .expertise-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.8rem;
-            margin-top: 1.5rem;
+            gap: 1rem;
+            margin-top: 2rem;
         }
 
         .tag {
             background: var(--primary-navy);
             color: var(--text-light);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
+            padding: 0.6rem 1.3rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 700;
         }
 
         .about-stats {
@@ -291,22 +311,23 @@
 
         .stat {
             background: var(--text-light);
-            padding: 1.5rem;
-            border-radius: 8px;
+            padding: 2rem;
+            border-radius: 10px;
             text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
         }
 
         .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
+            font-size: 3rem;
+            font-weight: 900;
             color: var(--secondary-orange);
         }
 
         .stat-label {
             color: var(--accent-muted);
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
+            font-size: 0.95rem;
+            margin-top: 0.8rem;
+            font-weight: 600;
         }
 
         /* Projects Section */
@@ -316,30 +337,30 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
             margin-top: 2rem;
         }
 
         .project-card {
             background: var(--accent-light);
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
             transition: all 0.3s;
-            border-left: 4px solid var(--secondary-orange);
+            border-left: 5px solid var(--secondary-orange);
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(31, 56, 100, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(31, 56, 100, 0.2);
         }
 
         .project-header {
             background: linear-gradient(135deg, var(--primary-navy), #0f1f36);
             color: var(--text-light);
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             text-align: center;
-            min-height: 150px;
+            min-height: 160px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -347,39 +368,39 @@
         }
 
         .project-icon {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
+            font-size: 3.5rem;
+            margin-bottom: 0.8rem;
         }
 
         .project-title {
-            font-size: 1.3rem;
-            font-weight: 700;
+            font-size: 1.4rem;
+            font-weight: 800;
         }
 
         .project-body {
-            padding: 1.5rem;
+            padding: 2rem;
         }
 
         .project-description {
             color: var(--accent-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-            line-height: 1.6;
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
         }
 
         .project-tech {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.6rem;
         }
 
         .tech-tag {
             background: var(--primary-navy);
             color: var(--text-light);
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.75rem;
-            font-weight: 600;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
         }
 
         /* Publications Section */
@@ -389,58 +410,60 @@
 
         .publication-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
             margin-top: 2rem;
         }
 
         .publication-card {
             background: var(--text-light);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--secondary-orange);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--secondary-orange);
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
             transition: all 0.3s;
         }
 
         .publication-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
         .pub-icon {
-            font-size: 2rem;
-            margin-bottom: 0.8rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
         .publication-card h4 {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--primary-navy);
-            margin-bottom: 0.8rem;
-            font-weight: 700;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            line-height: 1.5;
         }
 
         .pub-venue {
             color: var(--secondary-orange);
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 0.3rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 0.4rem;
         }
 
         .pub-date {
             color: var(--accent-muted);
-            font-size: 0.85rem;
-            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            margin-bottom: 1.2rem;
         }
 
         .btn-pub {
             color: var(--secondary-orange);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
+            font-weight: 700;
+            font-size: 0.95rem;
             transition: all 0.3s;
             cursor: pointer;
             display: inline-block;
+            margin-right: 1rem;
             margin-top: 0.5rem;
         }
 
@@ -456,48 +479,48 @@
 
         .teaching-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
             margin-top: 2rem;
         }
 
         .course-card {
             background: var(--text-light);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
             transition: all 0.3s;
-            border-top: 4px solid var(--secondary-orange);
+            border-top: 5px solid var(--secondary-orange);
         }
 
         .course-card:hover {
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
         }
 
         .course-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            margin-bottom: 1.2rem;
         }
 
         .course-name {
-            font-size: 1.2rem;
-            font-weight: 700;
+            font-size: 1.3rem;
+            font-weight: 800;
             color: var(--primary-navy);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
         }
 
         .course-year {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: var(--secondary-orange);
-            margin-bottom: 1rem;
-            font-weight: 600;
+            margin-bottom: 1.2rem;
+            font-weight: 700;
         }
 
         .course-topics {
             color: var(--accent-muted);
-            font-size: 0.9rem;
-            line-height: 1.6;
+            font-size: 0.95rem;
+            line-height: 1.7;
         }
 
         /* Research Section */
@@ -507,38 +530,40 @@
 
         .research-intro {
             background: var(--accent-light);
-            padding: 2rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--secondary-orange);
-            margin-bottom: 2rem;
+            padding: 2.5rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--secondary-orange);
+            margin-bottom: 3rem;
             color: var(--accent-muted);
-            line-height: 1.8;
+            line-height: 1.9;
+            font-size: 1.05rem;
         }
 
         .research-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
             margin-top: 2rem;
         }
 
         .research-card {
             background: var(--accent-light);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--primary-navy);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--primary-navy);
         }
 
         .research-card h4 {
             color: var(--primary-navy);
-            margin-bottom: 0.8rem;
-            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 800;
         }
 
         .research-card p {
             color: var(--accent-muted);
-            font-size: 0.9rem;
-            line-height: 1.6;
+            font-size: 0.95rem;
+            line-height: 1.7;
         }
 
         /* Downloads Section */
@@ -557,47 +582,49 @@
 
         .downloads-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
             margin-top: 2rem;
         }
 
         .download-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.12);
+            padding: 2.5rem;
+            border-radius: 10px;
             text-align: center;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1.5px solid rgba(255, 255, 255, 0.25);
             transition: all 0.3s;
         }
 
         .download-card:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.18);
+            transform: translateY(-5px);
             border-color: var(--secondary-orange);
+            box-shadow: 0 10px 30px rgba(224, 122, 26, 0.2);
         }
 
         .download-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            margin-bottom: 1.2rem;
         }
 
         .download-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
         }
 
         .download-description {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 2rem;
+            line-height: 1.6;
         }
 
         .download-buttons {
             display: flex;
-            gap: 0.8rem;
+            gap: 1rem;
             flex-wrap: wrap;
             justify-content: center;
         }
@@ -616,20 +643,20 @@
             background: var(--primary-navy);
             color: var(--text-light);
             text-align: center;
-            padding: 2rem;
-            border-top: 3px solid var(--secondary-orange);
+            padding: 3rem 2rem;
+            border-top: 4px solid var(--secondary-orange);
         }
 
         .footer-content {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
+            gap: 2rem;
+            margin-bottom: 2rem;
             flex-wrap: wrap;
         }
 
@@ -637,32 +664,114 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             background: var(--secondary-orange);
             border-radius: 50%;
             color: var(--text-light);
             text-decoration: none;
             transition: all 0.3s;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
 
         .social-links a:hover {
             background: rgba(224, 122, 26, 0.7);
-            transform: scale(1.1);
+            transform: scale(1.15);
         }
 
         .footer-text {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.6;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
         }
 
         /* Responsive */
+        @media (max-width: 1024px) {
+            .nav-container {
+                padding: 0 2rem;
+            }
+
+            .nav-links {
+                gap: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .contact-info {
+                gap: 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
         @media (max-width: 768px) {
+            nav {
+                padding: 1rem 0;
+            }
+
+            .nav-container {
+                padding: 0 1.5rem;
+            }
+
             .nav-links {
                 gap: 1rem;
-                font-size: 0.9rem;
+                font-size: 0.85rem;
+            }
+
+            .hero {
+                padding: 80px 1.5rem 60px 1.5rem;
+                min-height: auto;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.4rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-logo {
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 60px 1rem 40px 1rem;
             }
 
             .hero h1 {
@@ -673,63 +782,25 @@
                 font-size: 1.2rem;
             }
 
-            .about-content {
-                grid-template-columns: 1fr;
+            .hero .tagline {
+                font-size: 1rem;
             }
 
             .about-stats {
                 grid-template-columns: 1fr;
             }
 
-            .contact-info {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            nav {
-                padding: 0.8rem 0;
-            }
-
-            .nav-container {
-                padding: 0 1rem;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero {
-                padding: 3rem 1rem;
-                margin-top: 50px;
-            }
-
-            .hero h1 {
-                font-size: 1.5rem;
-            }
-
-            section {
-                padding: 2rem 1rem;
+            .projects-grid,
+            .publication-grid,
+            .teaching-content,
+            .research-grid,
+            .downloads-grid {
+                grid-template-columns: 1fr;
             }
         }
 
         ::-webkit-scrollbar {
-            width: 10px;
+            width: 12px;
         }
 
         ::-webkit-scrollbar-track {
@@ -738,7 +809,7 @@
 
         ::-webkit-scrollbar-thumb {
             background: var(--secondary-orange);
-            border-radius: 5px;
+            border-radius: 6px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
@@ -762,11 +833,11 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - TEMPLATE MATCHED -->
     <section class="hero">
         <div class="hero-content">
             <h1>Imen Jarraya</h1>
-            <div class="subtitle">Ph.D. Electrical Engineer & Postdoctoral Fellow</div>
+            <div class="subtitle">Ph.D. Electrical Engineer & Research Developer</div>
             <p class="tagline">Bridging artificial intelligence, robotics, and sustainable energy systems to create intelligent autonomous platforms for real-world impact.</p>
             
             <div class="hero-cta">
@@ -776,6 +847,7 @@
 
             <div class="contact-info">
                 <span>📧 <a href="mailto:imenjarraya85@gmail.com">imenjarraya85@gmail.com</a></span>
+                <span>📧 <a href="mailto:ijarraya@psu.edu.sa">ijarraya@psu.edu.sa</a></span>
                 <span>📱 <a href="tel:+966557254496">+966 55 725 44 96</a></span>
                 <span>📍 Riyadh, Saudi Arabia</span>
                 <span>💼 <a href="https://www.linkedin.com/in/imen-jarraya-a67898182/" target="_blank">LinkedIn</a></span>
@@ -937,8 +1009,8 @@
     <section id="publications">
         <h2 class="section-title">Publications & Conferences</h2>
         
-        <div style="max-width: 1200px; margin: 2rem auto;">
-            <h3 style="color: #1F3864; font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 3px solid #E07A1A; padding-bottom: 0.5rem;">Journal Articles (Q1 Venues)</h3>
+        <div style="max-width: 1400px; margin: 2rem auto;">
+            <h3 style="color: #1F3864; font-size: 2rem; margin-bottom: 2rem; border-bottom: 4px solid #E07A1A; padding-bottom: 1rem; font-weight: 800;">Journal Articles (Q1 Venues)</h3>
             
             <div class="publication-grid">
                 <div class="publication-card">
@@ -1014,8 +1086,8 @@
                 </div>
             </div>
 
-            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #E07A1A;">
-                <h3 style="color: #1F3864; font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 3px solid #E07A1A; padding-bottom: 0.5rem;">Conference Papers (11+)</h3>
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 3px solid #E07A1A;">
+                <h3 style="color: #1F3864; font-size: 2rem; margin-bottom: 2rem; border-bottom: 4px solid #E07A1A; padding-bottom: 1rem; font-weight: 800;">Conference Papers (11+)</h3>
                 
                 <div class="publication-grid">
                     <div class="publication-card">
@@ -1213,16 +1285,16 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <h3 style="margin-bottom: 1rem;">Let's Connect</h3>
+            <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem; font-weight: 800;">Let's Connect</h3>
             <div class="social-links">
                 <a href="mailto:imenjarraya85@gmail.com" title="Email">✉️</a>
                 <a href="tel:+966557254496" title="Phone">📱</a>
                 <a href="https://www.linkedin.com/in/imen-jarraya-a67898182/" target="_blank" title="LinkedIn">💼</a>
-                <a href="https://scholar.google.com/citations?user=imen-jarraya" target="_blank" title="Google Scholar">🎓</a>
+                <a href="https://scholar.google.com/" target="_blank" title="Google Scholar">🎓</a>
             </div>
             <p class="footer-text">
                 © 2026 Imen Jarraya. Postdoctoral Fellow at Prince Sultan University (RIOTU Lab), Riyadh, Saudi Arabia.<br>
-                <strong>Email:</strong> imenjarraya85@gmail.com<br>
+                <strong>Email:</strong> imenjarraya85@gmail.com | ijarraya@psu.edu.sa<br>
                 <strong>Phone:</strong> +966 55 725 44 96<br>
                 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/imen-jarraya-a67898182/" target="_blank" style="color: var(--secondary-orange);">imen-jarraya-a67898182</a><br>
                 Advancing intelligent autonomous systems through research and education aligned with Saudi Vision 2030.
@@ -1237,7 +1309,7 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
@@ -1248,20 +1320,20 @@
 Imen Jarraya, Ph.D.
 
 CONTACT INFORMATION
-Email: imenjarraya85@gmail.com
+Email: imenjarraya85@gmail.com | ijarraya@psu.edu.sa
 Phone: +966 55 725 44 96
 Location: Riyadh, Saudi Arabia
 LinkedIn: https://www.linkedin.com/in/imen-jarraya-a67898182/
 
 PROFESSIONAL SUMMARY
-Ph.D. Electrical Engineer and Postdoctoral Fellow. Experienced educator with 8+ years of university teaching. Research developer with background in advanced technology. Specialized in autonomous UAV navigation, battery health monitoring, power electronics, and IoT/AI integration.
+Ph.D. Electrical Engineer and Postdoctoral Fellow at Prince Sultan University. Experienced educator with 8+ years of university teaching. Research developer with background in advanced technology. Specialized in autonomous UAV navigation, battery health monitoring, power electronics, and IoT/AI integration.
 
 EDUCATION
 Ph.D. in Electrical Engineering - Advanced Control & Energy Management (2016-2021)
 Master's Degree in Electrical Engineering - Electrical Conversion & Renewable Energies (2008-2010)
 
 PROFESSIONAL EXPERIENCE
-Postdoctoral Fellow (2023-Present)
+Postdoctoral Fellow at Prince Sultan University (2023-Present)
 - Autonomous UAV localization in GNSS-denied environments
 - Battery state-of-health monitoring and estimation
 - Research mentoring and student supervision
@@ -1311,7 +1383,7 @@ TEACHING PHILOSOPHY
 My teaching philosophy is grounded in bridging rigorous theoretical foundations with hands-on, real-world application. I believe active learning, project-based pedagogy, and research-informed teaching help students become independent and creative problem-solvers.
 
 TEACHING EXPERIENCE (8+ YEARS)
-Postdoctoral Fellow (2023-Present)
+Postdoctoral Fellow at Prince Sultan University (2023-Present)
 Lecturer (2021-2023)
 Lecturer (2010-2015)
 
