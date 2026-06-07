@@ -183,6 +183,18 @@
             padding: 2rem;
             border-radius: 8px;
             border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .info-block:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-color: var(--accent-red);
+        }
+
+        .info-block a {
+            text-decoration: none;
+            color: inherit;
         }
 
         .info-label {
@@ -312,58 +324,6 @@
             line-height: 1.6;
         }
 
-        /* Publications Section */
-        .publication-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .pub-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-        }
-
-        .pub-card h4 {
-            font-size: 1rem;
-            margin-bottom: 0.8rem;
-            color: var(--text-dark);
-            line-height: 1.5;
-        }
-
-        .pub-venue {
-            font-size: 0.85rem;
-            color: var(--accent-red);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .pub-date {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-        }
-
-        .pub-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .pub-links a {
-            font-size: 0.9rem;
-            color: #2563EB;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .pub-links a:hover {
-            text-decoration: underline;
-        }
-
         /* Teaching Section */
         .teaching-grid {
             display: grid;
@@ -397,28 +357,6 @@
             line-height: 1.6;
         }
 
-        /* CV Section */
-        .cv-section {
-            text-align: center;
-            padding: 4rem;
-        }
-
-        .cv-section a {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: var(--text-dark);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
-            transition: all 0.3s;
-            font-size: 1rem;
-        }
-
-        .cv-section a:hover {
-            background: var(--accent-red);
-        }
-
         /* Footer */
         footer {
             padding: 2rem 4rem;
@@ -427,6 +365,15 @@
             font-size: 0.9rem;
             border-top: 1px solid var(--border-color);
             margin-top: 4rem;
+        }
+
+        footer a {
+            color: #2563EB;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         /* Responsive */
@@ -440,7 +387,7 @@
                 font-size: 2.5rem;
             }
 
-            .nav {
+            nav {
                 padding: 1.5rem 2rem;
             }
 
@@ -448,7 +395,7 @@
                 gap: 2rem;
             }
 
-            section, .about, .cv-section {
+            section, .about {
                 padding: 2rem;
             }
         }
@@ -488,7 +435,6 @@
             }
 
             .research-grid,
-            .publication-grid,
             .teaching-grid {
                 grid-template-columns: 1fr;
             }
@@ -502,7 +448,6 @@
         <ul class="nav-links">
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#research">Research</a></li>
-            <li><a href="#publications">Publications</a></li>
             <li><a href="#teaching">Teaching</a></li>
             <li><a href="#cv">CV</a></li>
         </ul>
@@ -517,8 +462,8 @@
             
             <div class="cta-buttons">
                 <a href="#research" class="btn btn-primary">Research →</a>
-                <a href="#publications" class="btn btn-secondary">Publications</a>
-                <a href="CV_ImenJarraya.pdf" class="btn btn-secondary">CV (PDF) ↓</a>
+                <a href="#teaching" class="btn btn-secondary">Teaching</a>
+                <a href="CV_Imen_Jarraya.pdf" class="btn btn-secondary">CV ↓</a>
                 <a href="mailto:ijarraya@psu.edu.sa" class="btn btn-secondary">Get in touch</a>
             </div>
         </div>
@@ -567,13 +512,20 @@
             
             <p>With over 8 years of university teaching experience and expertise in advanced technology, I focus on developing intelligent autonomous systems for real-world challenges including UAV navigation in GPS-denied environments, battery health monitoring for electric vehicles, and IoT/AI integration for smart systems.</p>
             
-            <p>My research has resulted in 7+ Q1 journal publications, 11+ conference papers, and multiple research grant proposals. I am passionate about bridging theory and practice, mentoring students, and creating solutions that advance Saudi Vision 2030 through innovation and sustainable technology.</p>
+            <p>My research has resulted in 15+ Q1 journal publications, 11+ conference papers, and multiple research grant proposals. I am passionate about bridging theory and practice, mentoring students, and creating solutions that advance Saudi Vision 2030 through innovation and sustainable technology.</p>
         </div>
     </section>
 
     <!-- Research Section -->
     <section id="research">
         <h3 class="section-title">Research</h3>
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <p style="font-size: 1.1rem; color: var(--text-dark); margin-bottom: 1rem;">
+                My research focuses on autonomous UAV navigation, embedded AI, robotics, battery health monitoring, and intelligent energy systems.
+            </p>
+            <a href="Imen_Jarraya_Research_Statement.pdf" class="btn btn-primary" download>Download Full Research Statement ↓</a>
+        </div>
+        
         <div class="research-grid">
             <div class="research-card">
                 <h3>🛩️ Autonomous UAV Localization</h3>
@@ -607,95 +559,16 @@
         </div>
     </section>
 
-    <!-- Publications Section -->
-    <section id="publications">
-        <h3 class="section-title">Publications</h3>
-        <div class="publication-grid">
-            <div class="pub-card">
-                <div class="pub-venue">Satellite Navigation (IF=10.1)</div>
-                <h4>CLAK: CNN-LSTM-Attention and KAN for Non-Visual UAV Localization</h4>
-                <div class="pub-date">2026</div>
-                <div class="pub-links">
-                    <a href="https://scholar.google.com/scholar?q=CLAK+CNN+LSTM+Attention" target="_blank">Scholar</a>
-                    <a href="https://link.springer.com/article/10.1186/s43020-026-00192-1" target="_blank">Paper</a>
-                </div>
-            </div>
-
-            <div class="pub-card">
-                <div class="pub-venue">Engineering Applications of AI (IF=8.0)</div>
-                <h4>Two-Stage Residual EKF using XGBoost and KAN</h4>
-                <div class="pub-date">2026</div>
-                <div class="pub-links">
-                    <a href="https://scholar.google.com/scholar?q=Residual+EKF+XGBoost" target="_blank">Scholar</a>
-                    <a href="https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence" target="_blank">Journal</a>
-                </div>
-            </div>
-
-            <div class="pub-card">
-                <div class="pub-venue">Satellite Navigation (IF=10.1)</div>
-                <h4>GNSS-Denied UAV Navigation: Computational Complexity Analysis</h4>
-                <div class="pub-date">2025</div>
-                <div class="pub-links">
-                    <a href="https://scholar.google.com/scholar?q=GNSS+denied+UAV" target="_blank">Scholar</a>
-                    <a href="https://link.springer.com/article/10.1186/s43020-025-00162-z" target="_blank">Paper</a>
-                </div>
-            </div>
-
-            <div class="pub-card">
-                <div class="pub-venue">Journal of Energy Storage (IF=9.8)</div>
-                <h4>SOH-KLSTM: Battery Health Monitoring with Hybrid Neural Networks</h4>
-                <div class="pub-date">2025</div>
-                <div class="pub-links">
-                    <a href="https://scholar.google.com/scholar?q=SOH+KLSTM+battery" target="_blank">Scholar</a>
-                    <a href="https://doi.org/10.1016/j.est.2025.116541" target="_blank">Paper</a>
-                </div>
-            </div>
-
-            <div class="pub-card">
-                <div class="pub-venue">Energy (IF=9.4)</div>
-                <h4>Optimizing EV Efficiency with Hybrid Energy Storage Systems</h4>
-                <div class="pub-date">2024</div>
-                <div class="pub-links">
-                    <a href="https://scholar.google.com/scholar?q=EV+hybrid+energy" target="_blank">Scholar</a>
-                    <a href="https://www.sciencedirect.com/journal/energy" target="_blank">Journal</a>
-                </div>
-            </div>
-
-            <div class="pub-card">
-                <div class="pub-venue">Results in Engineering (IF=7.9)</div>
-                <h4>OS-RFODG: Open-Source ROS2 Framework for UAV Datasets</h4>
-                <div class="pub-date">2025</div>
-                <div class="pub-links">
-                    <a href="https://scholar.google.com/scholar?q=RFODG+ROS2" target="_blank">Scholar</a>
-                    <a href="https://www.sciencedirect.com/science/article/pii/S2590123025026829" target="_blank">Paper</a>
-                </div>
-            </div>
-
-            <div class="pub-card">
-                <div class="pub-venue">IEEE Access (IF=3.6)</div>
-                <h4>Wearable Thoracic Surface Impedance for Continuous Cardiac Monitoring</h4>
-                <div class="pub-date">2024</div>
-                <div class="pub-links">
-                    <a href="https://scholar.google.com/scholar?q=wearable+thoracic+impedance" target="_blank">Scholar</a>
-                    <a href="https://ieeexplore.ieee.org/" target="_blank">IEEE</a>
-                </div>
-            </div>
-
-            <div class="pub-card">
-                <div class="pub-venue">Journal of Energy Storage (IF=9.8)</div>
-                <h4>Online State of Charge Estimation for Hybrid Electric Drive Vehicles</h4>
-                <div class="pub-date">2019</div>
-                <div class="pub-links">
-                    <a href="https://scholar.google.com/scholar?q=state+of+charge+estimation" target="_blank">Scholar</a>
-                    <a href="https://www.sciencedirect.com/journal/journal-of-energy-storage" target="_blank">Journal</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Teaching Section -->
     <section id="teaching">
         <h3 class="section-title">Teaching</h3>
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <p style="font-size: 1.1rem; color: var(--text-dark); margin-bottom: 1rem;">
+                8+ years of university teaching in embedded systems, IoT, real-time systems, automation, and project supervision.
+            </p>
+            <a href="Imen_Jarraya_Teaching_Statement.pdf" class="btn btn-primary" download>Download Full Teaching Statement ↓</a>
+        </div>
+
         <div class="teaching-grid">
             <div class="course-card">
                 <h4>⚡ Real-Time Systems</h4>
@@ -706,56 +579,64 @@
             <div class="course-card">
                 <h4>💻 Embedded Systems Programming</h4>
                 <div class="course-year">2021-2025</div>
-                <p>C/C++ on STM32F4, ARM Cortex architecture, Arduino development, hardware-in-the-loop testing.</p>
+                <p>C/C++ on STM32F4, ARM Cortex architecture, Arduino development, hardware-in-the-loop testing, firmware development.</p>
             </div>
 
             <div class="course-card">
                 <h4>🌐 Internet of Things</h4>
                 <div class="course-year">2021-2025</div>
-                <p>ESP32 platforms, MQTT protocols, sensor networks, cloud connectivity, IoT security, practical deployments.</p>
+                <p>ESP32 platforms, MQTT protocols, sensor networks, cloud connectivity, IoT security, practical system deployments.</p>
             </div>
 
             <div class="course-card">
                 <h4>🏭 Industrial Computing Workshop</h4>
                 <div class="course-year">2011-2015</div>
-                <p>PLC programming, Grafcet language, SCADA systems, industrial automation, manufacturing control.</p>
+                <p>PLC programming, Grafcet language, SCADA systems, industrial automation, manufacturing control systems.</p>
             </div>
 
             <div class="course-card">
                 <h4>⚙️ Power Electronics Workshop</h4>
                 <div class="course-year">2011-2015</div>
-                <p>Power converter design, circuit analysis, control systems, power electronics applications, labs.</p>
+                <p>Power converter design, circuit analysis, control systems, power electronics applications, laboratory exercises.</p>
             </div>
 
             <div class="course-card">
                 <h4>🤖 Automation & Control Systems</h4>
                 <div class="course-year">2011-2015</div>
-                <p>Logic control, sensor integration, actuator systems, manufacturing automation, process control.</p>
+                <p>Logic control, sensor integration, actuator systems, manufacturing automation, process control systems.</p>
             </div>
 
             <div class="course-card">
                 <h4>📊 Biomedical Measurement</h4>
                 <div class="course-year">2010-2011</div>
-                <p>Biomedical instrumentation, signal acquisition, measurement systems, data processing techniques.</p>
+                <p>Biomedical instrumentation, signal acquisition, measurement systems, data processing and analysis techniques.</p>
             </div>
 
             <div class="course-card">
                 <h4>👥 Research Mentoring</h4>
                 <div class="course-year">2023-Present</div>
-                <p>Ph.D. supervision, graduation project guidance, research methodology, academic writing, UAV systems.</p>
+                <p>Ph.D. supervision, graduation project guidance, research methodology, academic writing, UAV systems, embedded AI.</p>
             </div>
         </div>
     </section>
 
     <!-- CV Section -->
-    <section id="cv" class="cv-section">
-        <h3 class="section-title" style="justify-content: center;">CV</h3>
-        <a href="CV_ImenJarraya.pdf" download>Download Full CV (PDF)</a>
+    <section id="cv" style="text-align: center;">
+        <h3 class="section-title">Curriculum Vitae</h3>
+        <p style="font-size: 1.1rem; color: var(--text-dark); margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Complete professional CV with education, experience, publications, research projects, technical skills, supervision, and certifications.
+        </p>
+        <a href="CV_Imen_Jarraya.pdf" class="btn btn-primary" download style="margin-bottom: 2rem;">Download CV (PDF) ↓</a>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Imen Jarraya. Postdoctoral Fellow at Prince Sultan University (RIOTU Lab), Riyadh, Saudi Arabia.</p>
+        <p>© 2026 Imen Jarraya · Riyadh, Saudi Arabia<br>
+        <a href="mailto:ijarraya@psu.edu.sa">ijarraya@psu.edu.sa</a> · +966 55 725 44 96<br>
+        <a href="https://github.com/" target="_blank">GitHub</a> · 
+        <a href="https://www.researchgate.net/profile/Imen-Jarraya-2" target="_blank">ResearchGate</a> · 
+        <a href="https://www.psu.edu.sa/" target="_blank">PSU</a>
+        </p>
     </footer>
 
     <script>
