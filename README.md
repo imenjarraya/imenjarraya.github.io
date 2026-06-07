@@ -2,6 +2,7 @@
 
 Personal academic site for **Imen Jarraya** — Postdoctoral Fellow at the Robotics
 and Internet of Things Unit (RIOTU), Prince Sultan University, Riyadh.
+# Update to trigger site rebuild
 
 Static HTML + CSS + a small bit of JS. No build step. Hosted on GitHub Pages.
 
