@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Document Viewer</title>
+<link rel="stylesheet" href="assets/css/style.css" />
+<style>
+  body { display:flex; flex-direction:column; align-items:center; margin:2rem; }
+  .embed-container { width:100%; max-width:900px; }
+</style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="cv.html">CV</a> |
+    <a href="teaching.html">Teaching</a> |
+    <a href="research.html">Research</a>
+  </nav>
+  <h1 id="title">Document Viewer</h1>
+  <div class="embed-container">
+    <embed id="pdfEmbed" type="application/pdf" width="100%" height="800px" />
+  </div>
+  <script>
+    // Get query param "file" to determine which PDF to load
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get('file');
+    const titleMap = { cv: 'Curriculum Vitae', teaching: 'Teaching Statement', research: 'Research Statement' };
+    const pdfMap = {
+      cv: 'assets/docs/CV_Imen_Jarraya.pdf',
+      teaching: 'assets/docs/Imen_Jarraya_Teaching_Statement.pdf',
+      research: 'assets/docs/Imen_Jarraya_Research_Statement.pdf'
+    };
+    if (file && pdfMap[file]) {
+      document.getElementById('title').textContent = titleMap[file] || 'Document';
+      document.getElementById('pdfEmbed').src = pdfMap[file];
+    } else {
+      document.getElementById('title').textContent = 'Document Not Found';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Research — Imen Jarraya</title>
+<meta name="description" content="Research statement of Imen Jarraya: UAV navigation in GNSS-denied environments, embedded AI, robotics, battery health monitoring, and intelligent energy systems." />
+<link rel="canonical" href="https://imenjarraya.github.io/research.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f4e5f'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='18' font-weight='500' fill='%23f7f3ec' text-anchor='middle'%3EIJ%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html"><span class="dot"></span> Imen Jarraya</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="research.html" class="active">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="section-label">Research statement</div>
+  <h1>Reliable, deployable intelligence for autonomous systems</h1>
+  <p class="lead">
+    My research is positioned at the intersection of electrical engineering, embedded computer science,
+    robotics, artificial intelligence, and intelligent energy systems. I build methods that are
+    mathematically grounded, computationally efficient, and suitable for implementation on embedded
+    or robotic platforms.
+  </p>
+
+  <div class="cta-row">
+    <a class="btn" href="view-pdf.html?file=research">🔬 View Research PDF</a>
+    <a class="btn" href="publications.html">See publications</a>
+  </div>
+
+  <section class="prose">
+    <p>
+      A defining characteristic of my research profile is the integration of theoretical modeling,
+      data-driven learning, sensor fusion, simulation, and experimental validation. My work therefore
+      combines algorithm design with practical engineering constraints — sensor uncertainty, computation
+      time, hardware limitations, environmental variability, and real-time operation. My trajectory
+      has evolved from hybrid electric vehicle energy management and battery modeling toward
+      autonomous UAV navigation, GNSS-denied localization, embedded AI, robotics, and IoT-based
+      sensing systems.
+    </p>
+
+    <h2>Research vision</h2>
+    <p>
+      My long-term research vision is to contribute to autonomous and intelligent systems that can
+      operate safely and accurately in <em>uncertain, constrained, and infrastructure-limited</em>
+      environments — UAVs, mobile robots, embedded AI systems, and energy-aware intelligent platforms.
+      These systems require robust perception, localization, prediction, control, and decision-making
+      methods that remain reliable when conventional assumptions fail: when GNSS is degraded or
+      unavailable, when sensor measurements are noisy, when environmental maps are incomplete.
+    </p>
+    <p>
+      To address these challenges I pursue a research strategy that combines physics-based modeling,
+      machine learning, deep learning, and sensor fusion. Purely model-based methods may struggle in
+      complex nonlinear environments; purely data-driven models may lack interpretability, robustness,
+      or generalization. The goal is hybrid methods that draw on both: the structure and reliability
+      of engineering models, and the adaptability of modern AI.
+    </p>
+  </section>
+
+  <h2>Research areas and contributions</h2>
+  <table>
+    <thead>
+      <tr><th style="width: 30%;">Direction</th><th>Main contributions &amp; expertise</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Autonomous UAV navigation</strong></td>
+        <td>GNSS-denied localization, terrain-aided navigation, sensor fusion, DEM-based positioning, ROS&nbsp;2, PX4, Gazebo, and real/simulated UAV datasets.</td>
+      </tr>
+      <tr>
+        <td><strong>Embedded AI &amp; robotics</strong></td>
+        <td>CNN-LSTM-Attention, KAN-based architectures, GRU predictors, embedded decision-making, drone-to-drone tracking, and intelligent robotic systems.</td>
+      </tr>
+      <tr>
+        <td><strong>Energy &amp; battery systems</strong></td>
+        <td>Hybrid electric vehicle energy management, Li-ion battery and supercapacitor modeling, SOC / SOH estimation, optimization, and HIL validation.</td>
+      </tr>
+      <tr>
+        <td><strong>IoT &amp; intelligent sensing</strong></td>
+        <td>Sensor-based monitoring, public-lighting fault management, smart mailbox systems, biomedical sensing, and embedded hardware integration.</td>
+      </tr>
+      <tr>
+        <td><strong>Open-source research infrastructure</strong></td>
+        <td>Dataset generation, reproducible simulation environments, georeferenced terrain preprocessing, and benchmark frameworks for autonomous navigation.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <section class="prose">
+    <h2>UAV localization and navigation in GNSS-denied environments</h2>
+    <p>
+      My recent research has focused strongly on autonomous UAV localization and navigation under
+      degraded or unavailable GNSS conditions — a problem critical to real-world UAV operation in
+      urban, mountainous, indoor, contested, or infrastructure-limited environments. In these scenarios,
+      conventional satellite navigation may be unreliable, and the UAV must estimate its position using
+      onboard sensors, environmental maps, and intelligent fusion algorithms.
+    </p>
+    <p>
+      I have contributed to UAV localization frameworks that integrate inertial measurements, LiDAR or
+      altitude-related information, barometric data, visual or non-visual sensing, and georeferenced
+      terrain information such as DEM, DSM, and GeoTIFF maps. The methods include terrain-aided
+      navigation, TERCOM-inspired matching, EKF-based fusion, residual learning, and AI-enhanced
+      localization models — all aimed at reducing localization drift and improving position recovery
+      during GNSS-denied intervals.
+    </p>
+    <p>
+      A major direction is the design of <strong>hybrid learning and filtering architectures</strong>:
+      CNN-LSTM-Attention models, Kolmogorov-Arnold Network-based components, GRU predictors, XGBoost
+      residual learning, and EKF-based correction mechanisms. These exploit temporal sensor patterns,
+      elevation information, motion dynamics, and terrain constraints, providing localization that is
+      accurate, robust, and suitable for autonomous navigation in realistic outdoor environments.
+    </p>
+
+    <h2>Open-source dataset generation and simulation-based validation</h2>
+    <p>
+      A second major direction is reproducible research infrastructure for UAV localization and tracking.
+      I have contributed to open-source frameworks that use ROS&nbsp;2, PX4, Gazebo, QGIS, Blender, and
+      georeferenced terrain data to generate UAV datasets and validate autonomous navigation algorithms.
+      Progress in GNSS-denied navigation depends not only on algorithm design but on high-quality
+      datasets, realistic simulation, and transparent evaluation.
+    </p>
+    <p>
+      My work in this direction includes UAV mission simulation, georeferenced data collection,
+      synchronized sensor recording, trajectory generation, DEM/DSM-based terrain preprocessing, and
+      experimental validation workflows. By combining simulation and real-world-inspired sensing
+      modalities, I seek to narrow the gap between algorithmic development and practical deployment —
+      especially through benchmark environments that allow researchers to compare methods under
+      controlled GNSS-denial scenarios, different terrain profiles, sensor noise levels, and trajectories.
+    </p>
+
+    <h2>Robotics, tracking, and embedded artificial intelligence</h2>
+    <p>
+      Beyond UAV localization, I work on intelligent robotic systems that combine sensing, prediction,
+      and decision-making — aerial target tracking, drone-to-drone tracking, trajectory prediction, and
+      the integration of Kalman filtering with neural sequence models. These systems require fast
+      inference, temporal reasoning, and robustness to motion uncertainty, occlusion, and dynamic
+      environmental conditions.
+    </p>
+    <p>
+      Within RIOTU I also participate in research on quadruped robotics, embedded AI, and autonomous
+      decision-making. The broader objective is robotic systems that can perceive their environment,
+      estimate their state, predict future motion, and act reliably under complex conditions.
+    </p>
+
+    <h2>Embedded systems, wireless communication, and industrial AI</h2>
+    <p>
+      Alongside academic research, I have developed strong practical expertise in the design and
+      programming of embedded systems for robotics, IoT, and AI-based industrial solutions. At
+      <span class="mono">Novel-Ti</span> I worked on AI-enabled applications including facial recognition,
+      motion detection for children&rsquo;s interactive games, and computer-vision-based ball detection
+      for VAR-style applications — combining embedded programming, image processing, real-time
+      constraints, and applied AI in product-oriented contexts.
+    </p>
+    <p>
+      I have also contributed to wireless-communication projects (Zigbee, LoRa, ESP32, SIM8008), PCB
+      design with Altium Designer, temperature and humidity monitoring in beehive environments, and
+      a thermistor-based food monitoring system for restaurant kitchens. This gives me a practical
+      grasp of the trade-offs between short-range, long-range, and cellular communication modules —
+      directly applicable to smart monitoring and cloud-connected data acquisition across agricultural
+      and food-production chains, including olive-oil quality monitoring.
+    </p>
+
+    <h2>Energy management, battery modeling, and intelligent power systems</h2>
+    <p>
+      My doctoral work established my foundation in hybrid electric vehicle energy management, focused
+      on systems combining Li-ion batteries and supercapacitors. It involved battery and supercapacitor
+      modeling, SOC estimation, recursive least squares identification, optimization, power-management
+      strategies, and hardware-in-the-loop validation using MATLAB, Simulink, dSPACE, and embedded test
+      benches.
+    </p>
+    <p>
+      The line continues through battery state estimation and health monitoring: AI-enhanced battery
+      modeling, SOC and SOH prediction, uncertainty-aware estimation, and hybrid neural architectures
+      such as <em>KAN-LSTM</em> models. These methods matter for electric vehicles, renewable energy
+      storage, smart grids, and energy-aware robotic systems. The long-term objective is reliable and
+      interpretable models that support safer, more efficient energy management.
+    </p>
+
+    <h2>Methodological approach</h2>
+    <p>
+      My methodology follows a complete engineering cycle: define the problem and identify the
+      physical constraints, sensor limitations, and system requirements; develop mathematical models;
+      design algorithms; implement them in software; and validate through simulation or experimental
+      datasets. I emphasize quantitative evaluation — RMSE, MAE, R², inference time, robustness under
+      noise, trajectory deviation, computational complexity.
+    </p>
+    <p>
+      I also value reproducibility and transparency: open-source software, documented pipelines,
+      benchmark datasets, clear ablation studies, and well-defined evaluation protocols. Strong
+      research must provide not only good results but a clear explanation of <em>why</em> a method works,
+      <em>under which conditions</em> it performs well, and <em>where</em> its limitations remain.
+    </p>
+
+    <h2>Future agenda</h2>
+    <p><strong>1 · Robust autonomous localization.</strong> Hybrid frameworks for UAVs and mobile robots
+    that combine terrain-aided navigation, sensor fusion, physics-guided learning, uncertainty estimation,
+    and real-time embedded deployment — moving from offline evaluation toward real-time validation on
+    robotic platforms.</p>
+
+    <p><strong>2 · Embedded AI for autonomous decision-making.</strong> Lightweight, interpretable learning
+    architectures for robotics: KAN-based models, attention mechanisms, reinforcement learning, and
+    agentic decision-making frameworks. Beyond accuracy, the focus is on reliability, explainability, and
+    deployment feasibility on Jetson platforms, microcontrollers, and edge devices.</p>
+
+    <p><strong>3 · Intelligent energy-aware autonomy.</strong> Connecting electric-vehicle energy
+    management and battery health monitoring with robotics and UAVs: battery-aware mission planning,
+    energy-constrained navigation, health-aware power management, and intelligent monitoring for
+    mobile robots and UAVs.</p>
+
+    <h2>Collaboration, mentoring, scientific impact</h2>
+    <p>
+      My research is strongly connected to collaboration, mentoring, and dissemination. The challenges
+      addressed in autonomous systems, robotics, IoT, and energy management require interdisciplinary
+      work, and I have contributed to projects, journal publications, conference papers, open-source
+      software, student mentoring, and scientific activities at RIOTU. As a researcher and university
+      teacher, I consider mentoring an essential part of my mission — guiding students and young
+      researchers in defining research questions, building experimental pipelines, analyzing results,
+      writing scientific papers, and developing professional research habits.
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div>
+      © 2026 Imen Jarraya · Riyadh, Saudi Arabia<br/>
+      <a href="mailto:ijarraya@psu.edu.sa">ijarraya@psu.edu.sa</a> · +966 55 725 44 96
+    </div>
+    <div>
+      <a href="https://github.com/imenjarraya" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="https://www.researchgate.net/profile/Imen-Jarraya-2" target="_blank" rel="noopener">ResearchGate</a> ·
+      <a href="https://www.psu.edu.sa/" target="_blank" rel="noopener">PSU</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
