@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="UAV Localization in GNSS‑Denied Environments – research project focusing on sensor‑fusion and AI algorithms for reliable positioning without GPS.">
+  <title>UAV Localization – GNSS‑Denied</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;}
+    :root {
+      --primary-navy:#1F3864;
+      --secondary-orange:#E07A1A;
+      --text-dark:#1F1F1F;
+      --text-light:#FFFFFF;
+      --accent-light:#F5F7FA;
+      --accent-muted:#5B6B82;
+    }
+    body {font-family:'Inter',sans-serif;background:#F5F7FA;color:var(--text-dark);line-height:1.6;}
+    nav {position:fixed;top:0;width:100%;background:rgba(31,56,100,0.95);padding:1rem 0;z-index:1000;}
+    .nav-container{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:0 2rem;}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{color:var(--text-light);text-decoration:none;font-weight:500;transition:color .3s;}
+    .nav-links a:hover{color:var(--secondary-orange);}
+    .content{max-width:1200px;margin:120px auto 2rem;padding:0 2rem;}
+    h1{font-size:2.5rem;color:var(--primary-navy);margin-bottom:.5rem;}
+    .project-header{background:linear-gradient(135deg,var(--primary-navy),#0f1f36);color:var(--text-light);padding:2rem;border-radius:8px;}
+    .project-tech{margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap;}
+    .tech-tag{background:var(--primary-navy);color:var(--text-light);padding:.3rem .8rem;border-radius:15px;font-size:.85rem;}
+    .btn{display:inline-block;margin-top:1rem;padding:.8rem 1.5rem;background:var(--secondary-orange);color:var(--text-light);border:none;border-radius:5px;text-decoration:none;font-weight:600;transition:background .3s;}
+    .btn:hover{background:#d86910;}
+    footer{background:var(--primary-navy);color:var(--text-light);text-align:center;padding:2rem;margin-top:2rem;}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">IJ</div>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="index.html#teaching">Teaching</a></li>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="index.html#downloads">Documents</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="content">
+    <h1>UAV Localization in GNSS‑Denied Environments</h1>
+    <div class="project-header">
+      <p>Prince Sultan University (2024‑2025)</p>
+    </div>
+    <p style="margin-top:1rem;">This project investigates robust UAV positioning when GNSS signals are unavailable or degraded. We combine sensor‑fusion (IMU, visual odometry, LiDAR) with AI/ML techniques (deep neural networks, GRU predictors) to deliver accurate localization for autonomous aerial missions.</p>
+    <h2 style="margin-top:2rem;">Key Contributions</h2>
+    <ul>
+      <li>Design of a GNSS‑denied navigation stack built on ROS 2.</li>
+      <li>Integration of Kalman filtering with learning‑based predictors for drift correction.</li>
+      <li>Creation of the FLIGHTGEN dataset for training and benchmarking.</li>
+      <li>Open‑source release of the navigation framework on GitHub.</li>
+    </ul>
+    <div class="project-tech">
+      <span class="tech-tag">UAV</span>
+      <span class="tech-tag">GNSS‑Denied</span>
+      <span class="tech-tag">AI/ML</span>
+      <span class="tech-tag">ROS2</span>
+    </div>
+    <a href="https://github.com/imenjarraya/uav-localization" class="btn" target="_blank">View on GitHub</a>
+  </section>
+  <footer>
+    <p>&copy; 2026 Imen Jarraya. All rights reserved.</p>
+  </footer>
+</body>
+</html>
